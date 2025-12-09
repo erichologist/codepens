@@ -1,0 +1,22 @@
+section.ui
+  div
+    label(for="font-family") Font Family
+    select#font-family
+
+main
+  table.font-table
+    tr
+      th Characters (default settings)
+      td.default_chars(colspan="2")
+
+-
+  var refs = [
+  'https://mdn.github.io/css-examples/font-features/font-variant-numeric-frac.html',
+  'https://practice.typekit.com/lesson/caring-about-opentype-features/',
+  'https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates'
+  ]
+
+ul.small
+  each ref in refs
+    li
+      a(href=ref)=ref

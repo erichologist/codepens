@@ -1,0 +1,248 @@
+// Thanks to Roel Nieskens (pixelambacht.nl), this is copied from a demo made during css day 2024 
+
+@font-face {
+  font-family: "Literata";
+  src: url("https://assets.codepen.io/5568265/literata.woff2");
+}
+
+@font-face {
+  font-family: "Lekton";
+  src: url("https://assets.codepen.io/5568265/lekton.woff2");
+  size-adjust: 110%;
+  ascent-override: 85%;
+}
+
+$container: 40em;
+
+:root {
+  --gutter: 24px;
+  --container: #{$container};
+  --color-highlight: yellow;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+  
+body {
+  font-family: "Literata", serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 900;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+p {
+  margin-bottom: 0.75em;
+  text-wrap: pretty;
+}
+
+h1 {
+  font-size: 220%;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+th {
+  font-weight: 900;
+}
+
+th, 
+td {
+  &:last-child {
+    text-align: right;
+  }
+}
+
+tfoot {
+  font-weight: 700;
+}
+
+code {
+  font-family: "Lekton", serif;
+  background-color: var(--color-highlight);
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.container {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.spam {
+  text-transform: uppercase;
+}
+
+.tip {
+  &__block {
+    display: inline-block;
+    background-color: black;
+    aspect-ratio: 1;
+    height: 1.25em;
+    vertical-align: middle;
+  }
+}
+
+.codepen {
+
+  &__form {
+    margin: 24px 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__grid {
+    @media (min-width: $container) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: calc(var(--gutter) * 2);
+    }
+  }
+
+  &__cell {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+  &__header,
+  &__footer {
+    grid-column: 1 / span 2;
+  }
+
+  &__footer {
+    text-align: center;
+    margin-bottom: var(--gutter);
+  }
+
+  // this is where all the styling for the open type features can be found ------------------------
+  &--opentype {
+    font-optical-sizing: auto;
+    font-variant-numeric: oldstyle-nums;
+
+    h1, h2, h3, h4 {
+      font-variant-ligatures: discretionary-ligatures;
+    }
+
+    abbr {
+      font-variant-caps: all-petite-caps;
+    }
+        
+    sup {
+      font-size: inherit;
+      vertical-align: baseline;
+      font-variant-position: super;
+    }
+
+    code {
+      font-family: "Lekton", sans-serif;
+    }
+    
+    td,
+    time,
+    .counter {
+      font-variant-numeric: tabular-nums slashed-zero;
+    }
+    
+    .scientific {
+      font-variant-numeric: lining-nums;
+    }
+    
+    .fraction {
+      font-variant-numeric: diagonal-fractions;
+    }
+    
+    .chemical {
+      font-feature-settings: "sinf";
+    }
+    
+    .spam {
+      font-feature-settings: "case";
+    }
+
+    .tip {
+      &__block {
+        margin-top: calc(1ex - 1cap);
+      }
+    }
+  }
+}
+
+.form {
+  $self: &;
+  display: flex;
+  font-size: 0.8em;
+  align-items: center;
+  gap: 16px;
+
+  &__title {
+    margin: calc(1ex - 1cap) 0 0;
+  }
+
+  &__label {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  &__input {
+    position: fixed;
+    left: -100vw;
+
+    &:checked ~ #{$self}__switch {
+      background-color: rgba(#000, 0.5);
+      box-shadow: 0 1px 3px rgba(#000, 0.5) inset;
+
+      &::before {
+        transform: translateX(26px);
+      }
+    }
+  }
+
+  &__switch {
+    height: 30px;
+    width: 56px;
+    bottom: 0;
+    position: relative;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    background-color: rgba(#000, 0.2);
+    box-shadow: 0 1px 3px rgba(#000, 0.2) inset;
+    border: 1px solid rgba(#000, 0.3);
+
+    &::before {
+      background-color: #fff;
+      bottom: 4px;
+      left: 4px;
+      content: "";
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      transition: transform 0.25s ease-in-out;
+      border-radius: 50%;
+      box-shadow: 1px 1px 2px rgba(#000, 0.3);
+    }
+  }
+
+  &__text {
+    padding: 0 8px;
+    margin-top: calc(1ex - 1cap);
+  }
+}

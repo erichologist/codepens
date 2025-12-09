@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "cartograph-cf";
+  src: url("https://use.typekit.net/af/23e210/0000000000000000774b9f3f/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+}
+@font-feature-values cartograph-cf {
+  @styleset {
+    alt-style-1: 2 5;
+    /*alt-style-1 to ss02 ss05*/
+  }
+}
+.cart-alt-style {
+  font-family: cartograph-cf;
+  font-variant-alternates: styleset(alt-style-1);
+}
+
+.alt-style {
+  font-family: "cartograph-cf";
+  font-variant-alternates: styleset(alt-style-1);
+}
+
+@layer demo {
+  @font-face {
+    font-family: cartograph-cf;
+    src: url("https://use.typekit.net/af/23e210/0000000000000000774b9f3f/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2");
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #222;
+  color: #aaa;
+}
+
+main {
+  font-size: 24px;
+}
+
+.small {
+  font-size: 16px;
+}
+
+.ui {
+  padding: 0.4rem;
+  color: #fff8;
+  background: #242F3E;
+  background-color: #0f1c2c;
+  border-bottom: 1px solid #001F2E;
+  border-top: 1px solid #1C2432;
+  border-radius: 7px;
+  background-image: linear-gradient(to bottom, #004A6560, #004A6520) !important;
+  text-shadow: 0 0 #00ccff60, 0 0 5px #00EBDF40, 0 0 3px #00E9EE40, 0 0 6px #00ffaa60;
+  box-shadow: inset 2px 3px 10px #0f1c2c40, 0 0 14px rgba(0, 0, 0, 0.012), -1px -1px 7px rgba(0, 31, 51, 0.12);
+}
+.ui > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ui label {
+  font-size: 0.9rem;
+  padding-right: 0.6rem;
+}
+.ui select {
+  width: 15rem;
+  font-size: 1rem;
+  border: 1px solid #aaa0;
+  border-radius: 7px;
+  background-color: #002638;
+  background-image: linear-gradient(to bottom, #eee1, #ddd1);
+  box-shadow: inset 2px 2.6px 8px rgba(200, 200, 200, 0.02), 2px 2.6px 6px rgba(200, 200, 200, 0.01);
+  color: #fff2;
+}
+
+table {
+  margin: 1rem 0;
+  border-collapse: collapse;
+  border-bottom: 1px solid grey;
+}
+
+th, td {
+  padding: 0.6rem 1rem;
+  border-top: 1px solid grey;
+  vertical-align: middle;
+  text-align: left;
+}
+
+th {
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-family: sans-serif;
+}
+
+td.sample-style {
+  font-family: monospace;
+  font-size: 1rem;
+}
