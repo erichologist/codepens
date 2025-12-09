@@ -1,0 +1,1 @@
+$(".app").draggable({ stack: "div" });

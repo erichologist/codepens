@@ -1,0 +1,67 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	background-image: url(https://assets.codepen.io/439000/iCg.gif);
+	background-size: cover;
+	background-position: center;
+}
+
+.app {
+	position: absolute;
+	background: linear-gradient(
+		-35deg,
+		rgba(#111, 0.55) 0%,
+		rgba(#222, 0.55) 100%
+	);
+	box-shadow: 0 0 30px rgba(black, 0.3);
+	backdrop-filter: blur(10px);
+	padding: 2em;
+	width: 400px;
+	height: 280px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: white;
+	border-radius: 2em;
+	margin: 1em;
+
+	&:nth-child(1) {
+		top: 180px;
+		left: 230px;
+	}
+	&:nth-child(2) {
+		top: 80px;
+		left: 80px;
+	}
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 98.5%;
+		height: 98.5%;
+		border: 2px solid rgba(black, 0.05);
+		border-radius: 1.988em;
+		content: "";
+	}
+
+	&.light {
+		backdrop-filter: blur(7px);
+		background: linear-gradient(
+			-35deg,
+			rgba(#eee, 0.55) 0%,
+			rgba(#fff, 0.55) 100%
+		);
+		color: black;
+	}
+
+	h1 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
