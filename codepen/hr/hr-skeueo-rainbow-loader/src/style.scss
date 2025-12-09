@@ -1,0 +1,81 @@
+// toggle the comments here for a rainbow effect.
+// gradients need to be doubled plus a bit to cycle completely.
+$background-gradient: linear-gradient(-14deg, #ff0000, #ffaa00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000, #ffaa00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+
+$bar-width: 80%;
+
+// $background-gradient: linear-gradient(5deg, 
+// 	#77ffff,
+// 	#5555ff,
+// 	#3030cc,
+// 	#5555ff,
+// 	#77ffff,
+// 	#5555ff,
+// 	#3030cc,
+// 	#5555ff,
+// 	#77ffff
+// );
+
+$bg-img: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAMCAYAAABBV8wuAAAAR0lEQVR42oXOsQkAQQhE0StKRQ20/6o8RjBZcDd40R/ELyIKVLUxc9uDuxfMgIjgEsysQERaZsIlnCdmuId5bwbvcJyYwR5+DGh4DQAjsYAAAAAASUVORK5CYII=);
+
+.loader {
+	max-width: 980px;
+	background: $background-gradient;
+	background-size: 200% 100%;
+	height: 3px;
+	
+	animation: backgroundRotate 3s ease-in-out infinite;
+	
+	@keyframes backgroundRotate { 
+    0%{background-position:0% 0%}
+    100%{background-position:100% 0%}
+	}
+	
+	width: $bar-width;
+	border-radius: 1rem;
+	
+	border-top: 2px solid #333;
+	border-right: 2px solid #666;
+	border-bottom: 2px solid #555;
+	border-left: 2px solid #666;
+	box-shadow: 
+		-2px -5px 7px -2px 			rgba(0,0,0,.2),
+		3px 2px 6px -1px 				rgba(255,255,255,.2),
+		inset 0px 1px 0px 0px 	rgba(0,0,0,.3),
+		inset 0px -1px 0px 0px 	rgba(255,255,255,.4);
+	
+	&.overlay{
+		border: none;
+		box-shadow: none;
+	}
+	
+	&.stretch-anim{
+		animation: bootup 3s ease-in-out infinite ;
+	}
+}
+
+.overlay{
+	height: 6px;
+	width: calc( { $bar-width } + 5%);
+	margin-bottom: -6px;
+	filter: blur(16px);
+	background-blend-mode: screen;
+	opacity: .3;
+}
+
+.container{
+	background-image: $bg-img;
+	background-repeat: repeat;
+	background-blend-mode: multiply;
+	height: 100vh;
+	display: flex;
+	background-color: #bbb;
+	flex-wrap: wrap;
+	
+	justify-content: center;
+  align-items: center;
+	align-content: center;
+	
+	box-shadow: inset 0px -200px 400px -80px rgba(0,0,0,.3),
+	 inset 0px 150px 300px -200px rgba(255,255,255,.1);
+}

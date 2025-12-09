@@ -1,0 +1,85 @@
+body {
+	background-color: #eee;
+	padding: 4em 1em 2em;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: 200px; // in combination with grid-auto-flow
+	grid-auto-flow: dense; // no holes
+	grid-gap: 3px;
+	justify-content: center;
+	margin: 16px 16px 300px;
+
+	.photo {
+		background-size: cover;
+		background-position: center;
+		box-sizing: border-box;
+		width: 100%;
+		background-color: lightgrey;
+		overflow: hidden;
+		position: relative;
+		box-shadow: 1px 1px 3px rgba(black, 0.4);
+		border: 6px solid rgba(255,255,255,.25);
+		border: 6px solid rgba(0,0,0,.5);
+
+		// pattern of random rotation for every 11 elements
+		@for $i from 1 through 11 {
+			&:nth-of-type(11n + #{$i}) {
+				z-index: 100 + random(100); // make them overlap non-sequential
+				transform: rotate((-2 + random(4)) + deg)
+					translate((-4 + random(8) + px), (-4 + random(8) + px));
+			}
+		}
+
+		// for scale on hover purpose
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: inherit;
+			background-size: cover;
+			transform-origin: center;
+			filter: saturate(1) brightness(1) contrast(1);
+			transition: all 0.74s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		// scale when hover
+		&:focus,
+		&:hover {
+			&::after {
+				filter: saturate(1.05) brightness(1.05) contrast(1.05);
+				transform: scale(1.05);
+			}
+		}
+
+		// variations should have lesser chaos effect
+		@mixin variation() {
+			transform: rotate((-0.5 + random(1)) + deg)
+				translate((-1 + random(2) + px), (-1 + random(2) + px));
+		}
+
+		// wide variation
+		&:nth-of-type(7n) {
+			grid-column: span 2;
+			@include variation;
+		}
+
+		// tall variation
+		&:nth-of-type(13n) {
+			grid-row: span 2;
+			@include variation;
+		}
+
+		// large variation
+		&:nth-of-type(19n) {
+			grid-column: span 2;
+			grid-row: span 2;
+			@include variation;
+		}
+	}
+}
