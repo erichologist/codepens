@@ -1,0 +1,370 @@
+@font-face {font-family: "cartograph-cf";  src:url("https://use.typekit.net/af/39e61f/00000000000000007735fa50/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")format("woff2"),url("https://use.typekit.net/af/39e61f/00000000000000007735fa50/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")format("woff"),url("https://use.typekit.net/af/39e61f/00000000000000007735fa50/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")format("opentype"); font-display: swap;font-style: normal;font-weight: 700;font-stretch: normal;
+}
+@font-face {font-family: "cartograph-cf";  src:url("https://use.typekit.net/af/59fc23/00000000000000007735fa56/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")      format("woff2"),url("https://use.typekit.net/af/59fc23/00000000000000007735fa56/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")format("woff"),url("https://use.typekit.net/af/59fc23/00000000000000007735fa56/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3")format("opentype");font-display: swap;font-style: normal;font-weight:400;font-stretch: normal;
+}
+@font-face {font-family: "cartograph-cf";src:url("https://use.typekit.net/af/516649/0000000000000000774b9f39/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")format("woff2"),url("https://use.typekit.net/af/516649/0000000000000000774b9f39/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")format("woff"),  url("https://use.typekit.net/af/516649/0000000000000000774b9f39/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3")format("opentype");font-display: swap;font-style: italic;font-weight: 700;font-stretch: normal;
+}
+@font-face {font-family: "cartograph-cf"; src: url("https://use.typekit.net/af/23e210/0000000000000000774b9f3f/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")format("woff2"),url("https://use.typekit.net/af/23e210/0000000000000000774b9f3f/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")format("woff"),url("https://use.typekit.net/af/23e210/0000000000000000774b9f3f/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3")format("opentype");font-display: swap;font-style: italic;font-weight: 400;font-stretch: normal;font-variant-alternates: "salt" 2, "salt" 5 !important;font-variant-ligatures: common-ligatures !important;font-feature-settings: "ss05", "ss02" !important;-moz-font-feature-settings: "ss05", "ss02" !important;-webkit-font-feature-settings: "ss05", "ss02" !important;
+}
+@font-face { font-family: "Cartograph CF";src: local("Cartograph CF Light Italic"), local("CartographCF-LightItalic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-LightItalic.woff2")format("woff2"), url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-LightItalic.woff")format("woff");font-style: italic;font-weight: 300;font-variant-alternates: "salt" 2, "salt" 5;font-variant-ligatures: common-ligatures;font-feature-settings: "liga", "ss05", "ss02";-moz-font-feature-settings: "ss05", "ss02";-webkit-font-feature-settings: "ss05", "ss02"; font-display: swap;
+}
+@font-face {font-family: "Cartograph CF";src: local("Cartograph CF Regular Italic"),local("CartographCF-RegularItalic"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-RegularItalic.woff2")format("woff2"),url("https://github.com/erichologist/cartograph-fonts/raw/refs/heads/master/fonts-woff/CartographCF-RegularItalic.woff")format("woff");font-style: italic;font-weight: normal; font-variant-alternates: "salt" 2, "salt" 5;font-variant-ligatures: common-ligatures;font-feature-settings: "liga", "ss05", "ss02"; -moz-font-feature-settings: "ss05", "ss02"; -webkit-font-feature-settings: "ss05", "ss02";font-display: swap;
+}
+@font-face {font-family: "Parity Sans Extra";src: local("Parity Sans Extra Bold"), local("ParitySansExtraBold"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansExtraBold.woff2")format("woff2"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansExtraBold.woff") format("woff");font-weight: bold;font-style: normal;font-display: swap;
+}
+@font-face {font-family: "Parity Sans";src: local("Parity Sans Medium"), local("ParitySansMedium"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansMedium.woff2")format("woff2"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansMedium.woff") format("woff");font-weight: 500;font-style: normal;font-display: swap;
+}
+@font-face {font-family: "Parity Sans";src: local("Parity Sans Regular"), local("ParitySansRegular"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansRegular.woff2")format("woff2"),url("https://github.com/erichologist/assets/raw/refs/heads/main/fonts/parity/ParitySansRegular.woff")format("woff");font-weight: normal;font-style: normal;font-display: swap;
+}
+:root {
+  --parb: ParitySansExtraBold;
+  --parm: ParitySansMedium;
+  --bg-a1: linear-gradient(
+    to right,
+    rgba(60, 60, 60, 0.5),
+    rgba(50, 50, 50, 0.4) 50%,
+    rgba(40, 40, 40, 0.3),
+    rgba(30, 30, 30, 0.2),
+    rgba(20, 20, 20, 0.1),
+    rgba(10, 10, 10, 0)
+  );
+  --bg-a2: linear-gradient(
+    to right,
+    rgba(209, 44, 179, 0.7),
+    rgba(243, 33, 112, 0.5),
+    #ff6b0880,
+    #cf23cf80,
+    #eedd4400
+  );
+  --bg-a3: linear-gradient(
+    to right,
+    rgba(62, 95, 215, 0),
+    rgba(62, 95, 215, 0.5),
+    rgba(42, 131, 220, 0.6),
+    rgba(42, 131, 220, 0.8),
+    rgba(42, 131, 220, 0.6),
+    rgba(62, 95, 215, 0.5),
+    rgba(62, 95, 215, 0)
+  );
+  --bg-a4: linear-gradient(
+    to right,
+    rgba(60, 60, 60, 0.5),
+    rgba(55, 55, 55, 0.35),
+    rgba(40, 40, 40, 0.25),
+    rgba(30, 30, 30, 0)
+  );
+  --sh-a1: 3px 3px 3px #f3ec7880;
+  --sh-a2: -3px -3px 3px #af426180;
+  --lin-a1: linear-gradient(45deg, #f3ec78, #af4261);
+  --cart: "CartographCF-LightItalic", "CartographCF-RegularItalic", sans-serif;
+  --par: "Parity Sans", "ParitySansMonoRegular", "CartographCF-LightItalic",
+    "CartographCF-RegularItalic", sans-serif;
+}
+.cart,#cart {font-family: "Cartograph CF";font-style: italic;font-weight: 300;font-variant-alternates: "salt" 2, "salt" 5 !important;font-variant-ligatures: common-ligatures !important;font-feature-settings: "ss05", "ss02" !important;-moz-font-feature-settings: "ss05", "ss02" !important;-webkit-font-feature-settings: "ss05", "ss02" !important;
+}
+.parity {font-family: "ParitySansRegular", "ParitySansMonoRegular", "Parity Sans";font-weight: normal;font-style: normal;
+}
+.paritym {font-family: "ParitySansMedium", "ParitySansMonoRegular", "Parity Sans";font-weight: 500;font-style: normal;
+}
+.parityb {font-family: "ParitySansExtraBold", "ParitySansMonoRegular", "Parity Sans";font-weight: bold;font-style: normal;
+}
+/* Tutorial on https://fossheim.io/writing/posts/css-text-gradient. */
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: white;
+  /* Create the gradient. */
+  background-image: var(--lin-a1);
+/* Set  background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+/* Style the rest of the page. */
+body {
+  background: rgb(39, 39, 39);
+  background-color: #181123;
+}
+header {
+  /*
+  margin-top: 1em;
+  margin-top: calc(50vh - 3em);*/
+}
+.pan {
+  background-color: white;
+  background-image: var(--lin-a1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), var(--sh-a1), var(--sh-a2);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "ss05", "ss02";
+  -moz-font-feature-settings: "ss05", "ss02";
+  -webkit-font-feature-settings: "ss05", "ss02";
+  border-radius: 5px;
+  text-align: center;
+  background: var(--bg-a1);
+  z-index: -1;
+}
+.pan2 {
+  --sh-b1: 2px 2px 0px #E8F15260, 1px 1px 0px #E8F15280;
+  --sh-b2: -2px -2px 0px #ef00b060, -1px -1px 0px #ef00b080;
+  background-color: white;
+  background-image: var(--lin-a1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8) /*,var(--sh-a1), var(--sh-a2)*/;
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 ;
+  font-variant-ligatures: common-ligatures ;
+  font-feature-settings: "ss05", "ss02" !important;
+-moz-font-feature-settings: "ss05", "ss02" ;
+-webkit-font-feature-settings: "ss05", "ss02" ;
+  border-radius: 5px;
+  text-align: center;
+  background: var(--bg-a1);
+  z-index: -1;
+  background-color: white;
+  background-image: var(--lin-a1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), var(--sh-b1), var(--sh-b2);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5;
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "ss05", "ss02";
+  -moz-font-feature-settings: "ss05", "ss02";
+  -webkit-font-feature-settings: "ss05", "ss02";
+  border-radius: 5px;
+  text-align: center;
+  background: var(--bg-a1);
+  z-index: -1;
+
+}
+.pan3 {
+  background-color: white;
+  background-image: var(--lin-a1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), var(--sh-a1), var(--sh-a2);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-family: "ParitySansExtraBold", "ParitySansMonoRegular",
+    "ParitySansRegular", "ParitySansMonoRegular", "Parity Sans", "Parity Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  border-radius: 5px;
+  text-align: center;
+
+  background: var(--bg-a1);
+  z-index: 1;
+}
+.pan4 {
+  background-color: white;
+  background-image: var(--lin-a1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), var(--sh-a1), var(--sh-a2);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-family: "ParitySansExtraBold", "ParitySansMonoRegular",
+    "ParitySansRegular", "ParitySansMonoRegular", "Parity Sans", "Parity Sans";
+  font-weight: bold;
+  font-style: normal;
+  border-radius: 5px;
+  font-weight: normal;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  text-align: center;
+  background: var(--bg-a1);
+  z-index: 5;
+}
+h1,h1.par {
+  font-family: "ParitySansExtraBold", "ParitySansMonoRegular",
+    "ParitySansRegular", "ParitySansMonoRegular", "Parity Sans", "Parity Sans";
+  font-weight: bold;
+  font-style: normal;
+  border-radius: 5px;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  color: #efefef;
+font-size: 1em;
+  text-align: center;
+  background: var(--bg-a1);
+}
+h2.par,h2.cart,h2.cart2,
+h2 {
+    --sh-c1: -5px -5px 1px #E8F15240, -3px -3px 1px #E8F15240;
+    --sh-c2: -4px -4px 1px #ef00b020, -2px -2px 1px #ef00b080;
+    text-shadow:/*-2px -2px .1px #ef00b020,*/ -5px -5px 1px #E8F15280, /*-4px -4px .1px #ef00b020, */-7px -7px 2px #ef00b060;
+  font-size: 3em;
+  color: #FF416700;
+  padding: 3px;
+  padding-left: 0.6em;
+  text-align: left;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  background: var(--bg-a1);
+  border-radius: 5px;
+}
+p.par,p {
+  color: #efefef;
+  font-size: 3em;
+  text-align: left;
+  padding: 5px;
+  padding-left: 0.7em;
+  font-family: "ParitySansMedium", "ParitySansExtraBold", "ParitySansRegular",
+    "ParitySansMonoRegular", "Parity Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  background: var(--bg-a2);
+}
+h3.par,h3.cart,h3 {
+  font-size: 2em;
+  padding: 3px;
+  padding-left: 0.6em;
+  text-align: center;
+  color: #212121;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  background: var(--bg-a3);
+  border-radius: 5px;
+}
+span.par,span.cart,span {
+  font-size: 5em;
+  color: #0ff;
+  padding: 5px;
+  padding-left: 0.8em;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  background: var(--bg-a4);
+  border-radius: 5px;
+  text-align: left;
+}
+.pan2 {
+  font-size: 2em;
+  padding: 3px;
+  padding-left: 0.6em;
+  text-align: center;
+  color: #212121;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  background: var(--bg-a3);
+  border-radius: 5px;
+}
+.pan4 {
+  font-size: 2em;
+  padding: 3px;
+  padding-left: 0.6em;
+  text-align: center;
+  color: #212121;
+  font-family: "ParitySansMedium", "ParitySansMonoRegular", "Parity Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  background: var(--bg-a3);
+  border-radius: 5px;
+}
+h4 {
+  font-size: 2em;
+  padding: 3px;
+  padding-left: 0.6em;
+  text-align: center;
+  color: #212121;
+  font-family: "Cartograph CF";
+  font-style: italic;
+  font-weight: 700;
+  font-variant-alternates: "salt" 2, "salt" 5 !important;
+  font-variant-ligatures: common-ligatures !important;
+  font-feature-settings: "ss05", "ss02" !important;
+  -moz-font-feature-settings: "ss05", "ss02" !important;
+  -webkit-font-feature-settings: "ss05", "ss02" !important;
+  background: var(--bg-a3);
+  border-radius: 5px;
+}

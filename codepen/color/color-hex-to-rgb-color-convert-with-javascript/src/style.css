@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/** base styles **/
+@import url("https://raw.githubusercontent.com/erichologist/cartograph-fonts/refs/heads/master/normal-fonts/paritymono.css");
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+@font-face {
+font-family:"parity-sans-mono";
+src:url("https://raw.githubusercontent.com/erichologist/cartograph-fonts/refs/heads/master/normal-fonts/ParitySansMonoRegular.woff2") format("woff2");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+@font-face {
+font-family:"parity-sans-mono";
+src:url("https://raw.githubusercontent.com/erichologist/cartograph-fonts/refs/heads/master/normal-fonts/ParitySansMonoBold.woff2") format("woff2");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+.paritymono { font-family: "parity-sans-mono", monospace; }
+.paritymonobld { font-family: 'parity-sans-mono', monospace;
+font-style: normal;
+font-weight: 700;
+}
+.novamono {
+  font-family: "Nova Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: #222 !important;
+  font-family: 'parity-sans-mono', 'Parity Sans Mono Regular', 'Nova Mono', monospace !important;
+  font-weight: 400;
+  color: #eee;
+}
+
+#hex2rgb {
+    background-color: #444;
+font-family: 'parity-sans-mono', 'Parity Sans Mono Regular', 'Nova Mono',  monospace !important;
+  font-weight: 500 !important;
+    width: 450px;
+    min-height: 400px;
+    margin: 50px auto;
+    box-shadow: 1px 1px 5px #050505;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#hex2rgb h4 {
+  font-family: font-family: 'parity-sans-mono', 'Parity Sans Mono Regular', 'Nova Mono','ParitySansMedium', 'NovaMono', 'VictorMono NF', 'ParitySansMedium', 'Recursive-Italic', 'VictorMonoNFP-BoldItalic', monospace;
+	text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+}
+form {
+    margin: 30px 0;
+}
+
+form label {
+  margin: 0 0 15px 15px;
+  display: block;
+}
+
+form input {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #383838;
+    background-color: #777;
+    color: #efefef;
+}
+button, span, button.mono, span.mono {font-family: 'parity-sans-mono', 'Parity Sans Mono Regular', 'Nova Mono', monospace; font-weight: 700;}
+body, input, form,
+input.mono {
+  font-family: 'parity-sans-mono', 'Parity Sans Mono Regular', 'Nova Mono', 'ParitySansMedium','NovaMono', 'VictorMono NF', 'ParitySansMedium', 'Recursive-Italic', 'VictorMonoNFP-BoldItalic', monospace  !important;}
+button.pcaps, input.pcaps, span.pcaps {font-variant-caps: all-petite-caps !important;}
+button.smcaps, input.smcaps, span.smcaps {font-variant-caps: all-small-caps !important;}
+#convert {
+    width: 93%;
+    display: block;
+    margin: 25px auto;
+    height: 50px;
+    padding: 10px 0;
+    border-radius: 0;
+    border-color: #003D52;
+    background-color: #003D52;
+    font-size: 18px;
+    color: #00ffee;
+    text-shadow:1px 1px 2px #00ffee4d, -1px -1px 2px #00eeff4d;
+      box-shadow: -2px -2px 5px #070E1A80, 2px 2px 5px #080a1b80;
+}

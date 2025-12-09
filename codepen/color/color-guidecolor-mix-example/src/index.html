@@ -1,0 +1,46 @@
+<div class="panel">
+  <div class="mix-controls">
+    <label>
+      Color Space:
+      <select id="mix-space">
+        <option value="srgb">srgb</option>
+        <option value="srgb-linear">srgb-linear</option>
+        <option value="display-p3">display-p3</option>
+        <option value="a98-rgb">a98-rgb</option>
+        <option value="prophoto-rgb">prophoto-rgb</option>
+        <option value="rec2020">rec2020</option>
+        <option value="lab">lab</option>
+        <option value="oklab">oklab</option>
+        <option value="xyz">xyz</option>
+        <option value="xyz-d50">xyz-d50</option>
+        <option value="xyz-d65">xyz-d65</option>
+        <option value="hsl">hsl</option>
+        <option value="hwb">hwb</option>
+        <option value="lch">lch</option>
+        <option value="oklch">oklch</option>
+      </select>
+    </label>
+
+    <label>
+      Color 1:
+      <input type="text" id="color1" value="red">
+    </label>
+    <label>
+      Percentage 1:
+      <input type="range" id="percent1" min="0" max="100" value="50">
+    </label>
+
+    <label>
+      Color 2:
+      <input type="text" id="color2" value="blue">
+    </label>
+    <label>
+      Percentage 2:
+      <input type="range" id="percent2" min="0" max="100" value="50">
+    </label>
+  </div>
+
+  <div id="mix-display-box">
+    <code id="mix-display">color-mix(in srgb, red 50%, blue 50%)</code>
+  </div>
+</div>
