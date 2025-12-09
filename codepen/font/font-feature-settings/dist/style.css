@@ -1,0 +1,22 @@
+body {
+  font-family: "Linux Libertine", FreeSerif, "Palatino Linotype", "Gentium Plus", serif;
+  text-rendering: optimizeLegibility;
+  color: #ddd;
+  background:#292929;
+}
+hr {opacity:30%;}
+a {color:#00F5FE;}
+section { border-top: 1px solid #aaa; }
+h2, h1 {color:#fff;}
+p { font-size: 24px;
+  margin:1em;
+  padding-left:1em;
+}
+.none { 
+  font-feature-settings: "liga" 0, "clig" 0, "calt" 0, "caps" 0, "ccmp" 0, "kern" 0;
+  text-rendering: optimizeSpeed;
+}
+.normal { font-feature-settings: normal }
+.ligs { font-feature-settings: "liga", "dlig" }
+.fancy { font-feature-settings: "liga", "dlig", "hlig", "clig", "onum" }
+.all { font-feature-settings: "liga", "dlig", "hlig", "calt", "caps", "case", "clig", "cswh", "dnom", "expt", "fina", "frac", "init", "numr", "onum", "ornm", "swsh" }

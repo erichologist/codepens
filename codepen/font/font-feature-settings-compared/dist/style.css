@@ -1,0 +1,209 @@
+p {
+  font-family: "bookmania", serif;
+  -webkit-font-kerning: normal;
+          font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum", "dlig";
+  margin: 0.75rem 0;
+}
+p span {
+  color: #4095bf;
+  display: inline-block;
+  margin-right: 2rem;
+  text-align: right;
+  width: 130px;
+}
+p:first-of-type {
+  background: #333;
+  color: white;
+  font-family: arial;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0;
+  padding: 1rem 0;
+}
+
+.letter-salt {
+  font-feature-settings: "salt";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss01 {
+  font-feature-settings: "ss01";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss02 {
+  font-feature-settings: "ss02";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss03 {
+  font-feature-settings: "ss03";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss04 {
+  font-feature-settings: "ss04";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss05 {
+  font-feature-settings: "ss05";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss06 {
+  font-feature-settings: "ss06";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss07 {
+  font-feature-settings: "ss07";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss08 {
+  font-feature-settings: "ss08";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss09 {
+  font-feature-settings: "ss09";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss10 {
+  font-feature-settings: "ss10";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss11 {
+  font-feature-settings: "ss11";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss12 {
+  font-feature-settings: "ss12";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss13 {
+  font-feature-settings: "ss13";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss14 {
+  font-feature-settings: "ss14";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss015 {
+  font-feature-settings: "ss015";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss16 {
+  font-feature-settings: "ss16";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss17 {
+  font-feature-settings: "ss17";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss18 {
+  font-feature-settings: "ss18";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss19 {
+  font-feature-settings: "ss19";
+  letter-spacing: 0.1rem;
+}
+
+.letter-ss20 {
+  font-feature-settings: "ss20";
+  letter-spacing: 0.1rem;
+}
+
+.letter-swsh {
+  font-feature-settings: "swsh";
+  letter-spacing: 0.1rem;
+}
+
+.letter-kern {
+  font-feature-settings: "kern";
+  letter-spacing: 0.1rem;
+}
+
+.letter-liga {
+  font-feature-settings: "liga";
+  letter-spacing: 0.1rem;
+}
+
+.letter-clig {
+  font-feature-settings: "clig";
+  letter-spacing: 0.1rem;
+}
+
+.letter-dlig {
+  font-feature-settings: "dlig";
+  letter-spacing: 0.1rem;
+}
+
+.letter-hlig {
+  font-feature-settings: "hlig";
+  letter-spacing: 0.1rem;
+}
+
+.letter-calt {
+  font-feature-settings: "calt";
+  letter-spacing: 0.1rem;
+}
+
+.letter-hist {
+  font-feature-settings: "hist";
+  letter-spacing: 0.1rem;
+}
+
+.letter-onum {
+  font-feature-settings: "onum";
+  letter-spacing: 0.1rem;
+}
+
+.letter-lnum {
+  font-feature-settings: "lnum";
+  letter-spacing: 0.1rem;
+}
+
+.letter-tnum {
+  font-feature-settings: "tnum";
+  letter-spacing: 0.1rem;
+}
+
+.letter-pnum {
+  font-feature-settings: "pnum";
+  letter-spacing: 0.1rem;
+}
+
+.letter-dlig {
+  font-feature-settings: "dlig";
+  letter-spacing: 0.1rem;
+}
+
+.letter-zero {
+  font-feature-settings: "zero";
+  letter-spacing: 0.1rem;
+}
+
+/* Setup */
+body {
+  color: #171c1a;
+  background-color: white;
+  font-size: 2.7rem;
+  margin: 0;
+  padding: 0;
+}

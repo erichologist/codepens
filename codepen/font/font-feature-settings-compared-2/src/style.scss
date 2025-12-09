@@ -1,0 +1,103 @@
+p {
+  font-family: "bookmania", serif;
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
+	font-variant-numeric: oldstyle-nums proportional-nums;
+	font-feature-settings: "kern", "liga", "clig", "calt", "onum", "pnum", "dlig";
+
+	margin: .75rem 0;
+	
+	span {
+		color: hsl(200, 50%, 50%);
+		display: inline-block;
+		margin-right: 2rem;
+		text-align: right;
+		width: 130px;
+	}
+	
+	&:first-of-type {
+		background: #333;
+		color: white;
+		font-family: arial;
+		font-size: 1.25rem;
+		font-weight: bold;
+		margin-top: 0;
+		padding: 1rem 0;
+	}
+}
+
+$font-feature-settings: (
+	"salt",
+	"ss01",
+	"ss02",
+	"ss03",
+	"ss04",
+	"ss05",
+	"ss06",
+	"ss07",
+	"ss08",
+	"ss09",
+	"ss10",
+	"ss11",
+	"ss12",
+	"ss13",
+	"ss14",
+	"ss015",
+	"ss16",
+	"ss17",
+	"ss18",
+	"ss19",
+	"ss20",
+	"swsh",
+	"kern",
+	"liga",
+	"clig",
+	"dlig",
+	"hlig",
+	"calt",
+	"hist",
+	"onum", 
+	"lnum", 
+	"tnum", 
+	"pnum", 
+	"dlig",
+	"zero"
+);
+
+	
+// Oldstyle Figures (onum)
+// Lining Figures (lnum)
+// Tabular Figures (tnum)
+// Slashed Zero (zero)
+// Fractions (frac)
+// Superscript (sups)
+// Subscript (subs)
+// Ordinal (ordn)
+// Small Caps (smcp)
+// Small Caps from Capitals (c2sc)
+// Case-Sensitive Forms (case)
+// Standard Ligatures (liga)
+// Discretionary Ligatures (dlig)
+// Historical Ligatures (hlig)
+// Contextual Alternates (calt)
+// Swash (swsh)
+// Historical Forms (hist)
+// Stylistic Sets (ssxx)
+
+	
+@each $ffs in $font-feature-settings {
+	.letter-#{$ffs} {
+		font-feature-settings: $ffs;
+		letter-spacing: .1rem;
+	}
+}
+
+/* Setup */
+
+body {
+  color: hsl(150, 10%, 10%);
+  background-color: hsl(0, 0%, 100%);
+	font-size: 2.7rem;
+	margin: 0;
+	padding: 0;
+}
