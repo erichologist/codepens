@@ -1,0 +1,321 @@
+/* developed © Maxuiux */  
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  height: 100dvh;
+  background-color: #f8f8f8;
+}
+
+input {
+  border: initial;
+  outline: none;
+}
+
+button {
+  border: initial;
+  background: initial;
+  cursor: pointer;
+}
+
+.switch {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+  perspective: 600px;
+  perspective-origin: center;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch-slider {
+  flex-shrink: 0;
+  position: relative;
+  width: 86px;
+  height: 38px;
+  overflow: hidden;
+  /* background-color: #CAC5C8; */
+  /* background: linear-gradient(180deg, #e4e4e6 0%, #d7d7db 100%); */
+  border-radius: 24px;
+  /* transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); */
+}
+
+/* Базовый градиент */
+.switch-slider::before,
+.switch-slider::after {
+  content: "maxuiux";
+  font-size: 0;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* OFF градиент */
+.switch-slider::before {
+  background: linear-gradient(145deg, #e4e4e6 0%, #d7d7db 100%);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* ON градиент */
+.switch-slider::after {
+  background: linear-gradient(145deg, #3ccb60 0%, #42ba64 100%);
+  opacity: 0;
+  z-index: 2;
+}
+
+/* При активации: показать активный градиент */
+.switch input:checked+.switch-slider::before {
+  opacity: 0;
+}
+
+.switch input:checked+.switch-slider::after {
+  opacity: 1;
+}
+
+.switch-dot-glass {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  bottom: 0;
+  z-index: 2;
+  width: 50px;
+  height: 32px;
+  scale: 1;
+  border-radius: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation: dot-off 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.switch-dot-glass-filter {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  filter: url(#mini-liquid-lens);
+  scale: 1;
+  opacity: 0;
+  animation: filter-off 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.switch-dot-glass-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* background-color: rgba(255, 255, 255, 0.001); */
+}
+
+.switch-dot-glass-specular {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  box-shadow:
+    inset 1px 1px 0 rgba(82, 190, 121, 0.2),
+    inset 1px 3px 0 rgba(28, 63, 90, 0.05),
+    inset 0 0 22px rgba(255, 255, 255, 0.6),
+    inset -1px -1px 0 rgba(82, 190, 121, 0.12);
+  animation: filter-specular-off 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.switch input:checked~.switch-dot-glass {
+  animation: dot-on 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.switch input:checked~.switch-dot-glass .switch-dot-glass-specular {
+  animation: filter-specular-on 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.switch input:checked~.switch-dot-glass .switch-dot-glass-filter {
+  animation: filter-on 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.switch input:checked+.switch-slider {
+  /* background-color: #52BE79; */
+  /* background: linear-gradient(180deg, #3ec65b 0%, #3bbb5d 100%); */
+}
+
+
+@keyframes dot-on {
+  0% {
+    transform: scale(1) translateX(0) rotateY(0deg);
+  }
+
+  12% {
+    transform: scale(1.6) translateX(0) rotateY(-33deg);
+  }
+
+  50% {
+    transform: scale(1.6) translateX(28px) rotateY(-33deg);
+  }
+
+  82% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  90% {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  100% {
+    transform: scale(1) translateX(28px) rotateY(0deg);
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes dot-off {
+  0% {
+    transform: scale(1) translateX(28px) rotateY(0deg);
+  }
+
+  12% {
+    transform: scale(1.6) translateX(28px) rotateY(33deg);
+  }
+
+  50% {
+    transform: scale(1.6) translateX(0) rotateY(33deg);
+  }
+
+  82% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  90% {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  100% {
+    transform: scale(1) translateX(0) rotateY(0deg);
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes filter-on {
+  0% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes filter-off {
+  0% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes filter-specular-on {
+  0% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0),
+      inset 1px 3px 0 rgba(28, 63, 90, 0),
+      inset 0 0 22px rgba(255, 255, 255, 0),
+      inset -1px -1px 0 rgba(82, 190, 121, 0);
+  }
+
+  12% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0.2),
+      inset 1px 3px 0 rgba(28, 63, 90, 0.05),
+      inset 0 0 22px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 0 rgba(82, 190, 121, 0.12);
+  }
+
+  80% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0.2),
+      inset 1px 3px 0 rgba(28, 63, 90, 0.05),
+      inset 0 0 22px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 0 rgba(82, 190, 121, 0.12);
+  }
+
+  100% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0),
+      inset 1px 3px 0 rgba(28, 63, 90, 0),
+      inset 0 0 22px rgba(255, 255, 255, 0),
+      inset -1px -1px 0 rgba(82, 190, 121, 0);
+  }
+}
+
+@keyframes filter-specular-off {
+  0% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0),
+      inset 1px 3px 0 rgba(28, 63, 90, 0),
+      inset 0 0 22px rgba(255, 255, 255, 0),
+      inset -1px -1px 0 rgba(82, 190, 121, 0);
+  }
+
+  12% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0.2),
+      inset 1px 3px 0 rgba(28, 63, 90, 0.05),
+      inset 0 0 22px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 0 rgba(82, 190, 121, 0.12);
+  }
+
+  80% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0.2),
+      inset 1px 3px 0 rgba(28, 63, 90, 0.05),
+      inset 0 0 22px rgba(255, 255, 255, 0.6),
+      inset -1px -1px 0 rgba(82, 190, 121, 0.12);
+  }
+
+  100% {
+    box-shadow:
+      inset 1px 1px 0 rgba(82, 190, 121, 0),
+      inset 1px 3px 0 rgba(28, 63, 90, 0),
+      inset 0 0 22px rgba(255, 255, 255, 0),
+      inset -1px -1px 0 rgba(82, 190, 121, 0);
+  }
+}
+
+/* developed © Maxuiux */  

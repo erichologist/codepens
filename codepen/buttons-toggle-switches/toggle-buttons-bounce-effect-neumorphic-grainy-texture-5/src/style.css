@@ -1,0 +1,266 @@
+:root {
+  --light-bg: #EDEDED;
+  --dark-bg: #1A1A1A;
+  --light: #F2F2F2;
+  --dark: #1A1A1A;
+  
+  --on-light-shadow: inset 0 0 10px 0 rgb(255,255,255,1), 15px -20px 35px 0 rgb(102,210,51,0.56), inset 15px -20px 35px 0 rgb(0,0,0,0.25), -15px 15px 28px 0 rgb(0,0,0,0.25);
+  --on-light: radial-gradient(circle at 60% 30%, #ACFF85, #66D233);
+  --off-light-shadow: inset 0 0 33px 0 rgb(255,255,255,1), 15px -20px 35px 0 rgb(197,197,197,0.56), inset 15px -20px 35px 0 rgb(0,0,0,0.25), -15px 15px 28px 0 rgb(0,0,0,0.25);
+  --off-light: radial-gradient(circle at 60% 30%, #D1D1D1, #DDDDDD);
+  --off-red-light-shadow: inset 0 0 18px 0 rgb(255,255,255,1), 15px -20px 35px 0 rgb(255,175,175,0.56), inset 15px -20px 35px 0 rgb(0,0,0,0.25), -15px 28px 28px 0 rgb(0,0,0,0.25);
+  --off-red-light: radial-gradient(circle at 60% 30%, #FF7676, #ED5C5C);
+  
+  
+  
+  --on-dark-shadow: inset 0 0 19px 0 rgb(0,0,0,1), 15px -20px 38px 0 rgb(102,210,51,0.24), inset 15px -20px 35px 0 rgb(0,0,0,0.25), -15px 15px 28px 0 rgb(0,0,0,0.72);
+  --on-dark: radial-gradient(circle at 60% 30%, #91D372, #35651E);
+  --off-dark-shadow: inset 0 0 37px 0 rgb(0,0,0,1), 15px -20px 38px 0 rgb(0,0,0,0.14), inset 15px -20px 35px 0 rgb(0,0,0,0.25), -15px 15px 28px 0 rgb(0,0,0,0.25);
+  --off-dark: radial-gradient(circle at 60% 30%, #343434, #484848);
+  --off-red-dark-shadow: inset 0 0 17px 0 rgb(0,0,0,1), 15px -20px 38px 0 rgb(146,59,59,0.14), inset 15px -20px 35px 0 rgb(0,0,0,0.25), -15px 15px 28px 0 rgb(0,0,0,0.25);
+  --off-red-dark: radial-gradient(circle at 60% 30%, #A63D3D, #6F2929);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Recoleta";
+  box-sizing: border-box;
+  transition: all ease 0.3s;
+}
+
+.light-side::before {
+  position: absolute;
+  light: 0;
+  top: 0;
+  content: '';
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  opacity: 50%;
+  background: #000000;
+  filter: url(#noiseFilter);
+  pointer-events: none;
+}
+
+.dark-side::before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: '';
+  width: 45.45%;
+  height: 100%;
+  z-index: 2;
+  opacity: 20%;
+  background: #000000;
+  filter: url(#noiseFilter2);
+  pointer-events: none;
+}
+
+
+svg {
+  position: absolute;
+  z-index: 2;
+}
+
+.light-side {
+  background-color: var(--light-bg);
+  height: 100vh;
+  width: 50%;
+  z-index: 1;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.dark-side {
+  background-color: var(--dark-bg);
+  height: 100vh;
+  width: 50%;
+  z-index: 1;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+
+/* Toggle buttons */
+.toggle {
+  height: 150px;
+  width: 300px;
+  border-radius: 150px;
+}
+
+.light {
+  background-color: var(--light);
+  box-shadow: inset 0 -5px 5px 0 rgb(0,0,0,0.13), inset 0 5px 5px 0 rgb(255,255,255,1), inset 23px -33px 28px 0 rgb(255,255,255,0.9), inset -25px 28px 23px 0 rgb(0,0,0,0.1), 0 -15px 18px 0 rgb(255,255,255,1), 0 25px 41px 0 rgb(0,0,0,0.16);
+}
+
+.dark {
+  background-color: var(--dark);
+  box-shadow: inset 0 -5px 5px 0 rgb(0,0,0,0.5), inset 0 5px 5px 0 rgb(255,255,255,0.13), inset 23px -33px 28px 0 rgb(255,255,255,0.03), inset -25px 28px 23px 0 rgb(0,0,0,0.4), 0 -15px 30px 0 rgb(255,255,255,0.08), 0 25px 41px 0 rgb(0,0,0,0.4);
+}
+
+.toggle {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+/* Switches */
+
+.switch {
+  height: 112px;
+  width: 112px;
+  border-radius: 100px;
+  position: absolute;
+  transition: all ease 0.3s;
+  right: 20px;
+  animation: bounce-right 0.7s ease-out;
+}
+
+.switch-light {
+  background: var(--on-light);
+  box-shadow: var(--on-light-shadow);
+}
+
+.switch-dark {
+  background: var(--on-dark);
+  box-shadow: var(--on-dark-shadow);
+}
+
+.switch.off-red-light {
+  transform: translateX(-150px);
+  transition: all ease 0.3s;
+  background: var(--off-red-light);
+  box-shadow: var(--off-red-light-shadow);
+  
+  animation: bounce-left 0.7s ease-out;
+}
+
+.switch.off-light {
+  transform: translateX(-150px);
+  transition: all ease 0.3s;
+  background: var(--off-light);
+  box-shadow: var(--off-light-shadow);
+  
+  animation: bounce-left 0.7s ease-out;
+}
+
+.switch.off-red-dark {
+  transform: translateX(-150px);
+  transition: all ease 0.3s;
+  background: var(--off-red-dark);
+  box-shadow: var(--off-red-dark-shadow);
+  
+  animation: bounce-left 0.7s ease-out;
+}
+
+.switch.off-dark {
+  transform: translateX(-150px);
+  transition: all ease 0.3s;
+  background: var(--off-dark);
+  box-shadow: var(--off-dark-shadow);
+  
+  animation: bounce-left 0.7s ease-out;
+}
+
+/* animations */
+
+@keyframes bounce-left {
+  0% {transform: translateX(0px);}
+  15% {transform: translateX(-180px);}
+  30% {transform: translateX(-150px);}
+  45% {transform: translateX(-160px);}
+  60% {transform: translateX(-150px);}
+  75% {transform: translateX(-152px);}
+  100% {transform: translateX(-150px);}
+}
+
+@keyframes bounce-right {
+  0% {transform: translateX(-150px);}
+  15% {transform: translateX(30px);}
+  30% {transform: translateX(0);}
+  45% {transform: translateX(10px);}
+  60% {transform: translateX(0);}
+  75% {transform: translateX(2px);}
+  100% {transform: translateX(0);}
+}
+
+
+
+
+/* screen */
+
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .light-side {
+    width: 100%;
+    gap: 3em;
+  }
+  
+  .light-side::before {
+    width: 100%;
+    height: 50%;
+  }
+  
+  .dark-side {
+    width: 100%;
+    gap: 3em;
+  }
+  
+  .dark-side::before {
+    width: 100%;
+    height: 50%;
+    top:50%;
+  }
+ 
+}
+
+@media only screen and (max-width: 750px) {
+  .light-side {
+    gap: 2em;
+  }
+  
+  .dark-side {
+    gap: 2em;
+  }
+  
+}
+
+
+
+/* Not required */
+.youtube {
+  text-decoration: none;
+  position: absolute;
+  padding: 1em 2em;
+  bottom: 1em;
+  right: 1em;
+  z-index: 9999;
+  font-family: 'Roboto';
+  color: #E1E1E1;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+}
+
+.youtube:hover {
+  background-color: rgb(225,225,225,0.14);
+}
