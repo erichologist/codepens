@@ -99,14 +99,14 @@ app.get('/', (req, res) => {
     }
     .demos {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
     }
     .demo-card {
       background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
       border-radius: 12px;
-      padding: 1.25rem;
+      overflow: hidden;
       transition: all 0.3s ease;
       border: 1px solid rgba(255,255,255,0.1);
     }
@@ -114,6 +114,32 @@ app.get('/', (req, res) => {
       transform: translateY(-5px);
       background: rgba(255,255,255,0.15);
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .thumbnail-wrapper {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+    }
+    .thumbnail-wrapper iframe {
+      width: 800px;
+      height: 600px;
+      border: none;
+      transform: scale(0.4);
+      transform-origin: top left;
+      pointer-events: none;
+    }
+    .thumbnail-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+    .demo-card .title {
+      padding: 1rem;
     }
     .demo-card a {
       color: #fff;
@@ -144,7 +170,13 @@ app.get('/', (req, res) => {
     for (const demo of demos) {
       html += `
         <div class="demo-card">
-          <a href="/${demo.path}" target="_blank">${demo.name}</a>
+          <a href="/${demo.path}" target="_blank">
+            <div class="thumbnail-wrapper">
+              <iframe src="/${demo.path}" loading="lazy"></iframe>
+              <div class="thumbnail-overlay"></div>
+            </div>
+            <div class="title">${demo.name}</div>
+          </a>
         </div>`;
     }
     
