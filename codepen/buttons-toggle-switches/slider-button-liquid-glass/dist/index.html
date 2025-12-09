@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Slider Button Liquid Glass Apple iOS 26 - 2025</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- developed © Maxuiux -->
+
+  <div class="slider-container" id="slider">
+    <div class="slider-progress" id="progress"></div>
+    <div class="slider-thumb-glass" id="thumb">
+      <div class="slider-thumb-glass-filter"></div>
+      <div class="slider-thumb-glass-overlay"></div>
+      <div class="slider-thumb-glass-specular"></div>
+    </div>
+  </div>
+
+  <svg width="0" height="0">
+    <filter id="mini-liquid-lens" x="-50%" y="-50%" width="200%" height="200%">
+      <feImage x="0" y="0" result="normalMap" xlink:href="data:image/svg+xml;utf8,
+      <svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'>
+        <radialGradient id='invmap' cx='50%' cy='50%' r='75%'>
+          <stop offset='0%' stop-color='rgb(128,128,255)'/>
+          <stop offset='90%' stop-color='rgb(255,255,255)'/>
+        </radialGradient>
+        <rect width='100%' height='100%' fill='url(#invmap)'/>
+      </svg>" />
+      <feDisplacementMap in="SourceGraphic" in2="normalMap" scale="-252" xChannelSelector="R" yChannelSelector="G"
+        result="displaced" />
+      <feMerge>
+        <feMergeNode in="displaced" />
+      </feMerge>
+    </filter>
+  </svg>
+  
+  <!-- developed © Maxuiux -->
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

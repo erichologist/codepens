@@ -1,0 +1,448 @@
+:root {
+    /* vars */
+    --handle-padding: 2em;
+    --track-padding: 3px;
+    --width: min(calc(100vw - var(--handle-padding)), 60em);
+}
+
+#slider {
+    
+    --bg: light-dark(hsl(212, 22%, 86%), hsl(212, 16%, 10%));
+    --range-handle-focus: black;
+    --range-handle-border: oklch(0.3 0.01 212 / 0.5);
+    --range-pip: transparent;
+    --range-pip-active: transparent;
+    --range-pip-hover: transparent;
+
+    font-size: 1em;
+    width: var(--width);
+
+    background: var(--bg);
+    padding: 0.25em;
+    padding-inline: calc(var(--handle-padding) + 0.25em);
+    border-radius: 99vw;
+
+    .rangeSlider {
+        font-family: "Jersey 10", monospace;
+        margin: 0;
+        background: transparent;
+        height: 4em;
+    }
+    
+    .rangeSlider::before {
+        /* this is just to make the end padding click-able */
+        content: "";
+        position: absolute;
+        inset: 0;
+        left: auto;
+        right: calc(var(--handle-padding) * -1);
+        width: var(--handle-padding);
+        z-index: 1;
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }
+
+    .rangeBar {
+        --padding: calc(var(--handle-padding) - ((var(--range-size) / 100 * var(--handle-padding))));
+
+        height: inherit;
+        border-radius: inherit;
+        width: calc(
+            var(--handle-padding) + var(--handle-padding) + var(--slider-length) *
+                (var(--range-size) / 100 * 1px)
+        );
+        padding-left: var(--padding);
+        margin-left: calc(var(--handle-padding) * -1);
+
+        box-shadow: 
+            inset 0 0px 0px 0.5px oklch(0 0 0 / 0.2),
+            0px 0.4em 0.5em -0.25em oklch(0.3 0.01 212 / 0.05),
+            0px 0.25em 0.3em -0.2em oklch(0.3 0.01 212 / 0.05),
+            0px 0.15em 0.25em -0.1em oklch(0.3 0.01 212 / 0.05),
+            0px 1px 2px -1px oklch(0.3 0.01 212 / 0.05);
+        background: transparent;
+    }
+
+    .rangeBar::before,
+    .rangeBar::after {
+        content: "";
+        position: absolute;
+        inset: 0em;
+    }
+
+    .rangeBar::before {
+        background-image: linear-gradient(
+            to right in oklch,
+            oklch(0.79 0.05 260),
+            oklch(0.84 0.12 260),
+            oklch(0.79 0.05 260)
+        );
+        background-size: calc(var(--width) + var(--handle-padding)) 100%;
+        filter: blur(0.66em);
+        z-index: -2;
+        opacity: calc((var(--range-size) / 100 + 0.4) * 0.6);
+        inset: 0.5em;
+        border-radius: inherit;
+        transition: all 0.2s var(--cubic-out);
+    }
+
+    .rangeBar::after {
+        --edge: 50px;
+        --gleam-opacity: 0;
+        background-image: radial-gradient(
+                farthest-side at bottom center,
+                oklch(1 0 0 / calc(var(--range-size) / 100)) 1em,
+                oklch(1 0 0 / 0) 90%
+            ),
+            linear-gradient(
+                96deg,
+                oklch(1 0 0 / 0) calc(var(--gleam, 50%) - 80%),
+                oklch(1 0 0 / var(--gleam-opacity, 0))
+                    calc(var(--gleam, 50%) - var(--edge)),
+                oklch(1 0 0 / 0) var(--gleam, 50%)
+            ),
+            linear-gradient(rgba(255, 255, 255, 0.45) 0% 100%);
+
+        background-size: calc(var(--width) - var(--handle-padding) * 2) 100%,
+            calc(var(--width) + var(--handle-padding)) 100%,
+            calc(var(--width) + var(--handle-padding)) 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        box-shadow: inset 0 0 0.66em rgba(255, 255, 255, 0.2),
+            inset 1px 0px 0px 0px oklch(0 0 0 / 0.2),
+            inset -1px 0px 0px 0px oklch(0 0 0 / 0.2),
+            inset 0 1px 0px 0px oklch(1 0 0 / 0.6),
+            inset 0 -1px 0px 0px oklch(1 0 0 / 0.6);
+
+        border-radius: inherit;
+        transition: all 0.25s ease, --gleam-opacity 0.25s var(--cubic);
+
+        @media (prefers-reduced-motion: no-preference) {
+            animation: active 0.6s var(--cubic) infinite;
+        }
+    }
+
+    &:hover:not(:has(.rsPress)) .rangeBar::before,
+    .rsFocus:not(:has(.rsPress)) .rangeBar::before {
+        inset: -0.5em;
+        opacity: calc((var(--range-size) / 100 + 0.3) * 0.3);
+        filter: blur(1.5em);
+    }
+
+    :has(.rsPress) .rangeBar::before {
+        filter: blur(1em);
+    }
+
+    :has(.rsPress) .rangeBar::after {
+        --gleam-opacity: calc(var(--range-size) / 100);
+    }
+
+    .rangeHandle {
+        width: 3em;
+        height: auto;
+        aspect-ratio: 1;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%) translateX(50%);
+    }
+
+    .rangeNub {
+        transform: none;
+        background-image: linear-gradient(
+            to bottom,
+            oklch(0.3 0.01 40),
+            oklch(0.6 0.005 40)
+        );
+
+        box-shadow: inset 0 0 1.5em oklch(0.3 0.01 212),
+            inset 0 0 0.3em oklch(0.3 0.01 212),
+            oklch(0.3 0.01 212 / 0.2) 0px 0.2em 0.25em -1px, 
+            oklch(0.3 0.01 212 / 0.12) 0px 0.1em 0.2em -1px;
+
+        border: solid 0.2em oklch(0.3 0.005 212);
+    }
+
+    .rangeFloat {
+        font-size: 2em;
+        translate: none;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        background: none;
+        padding: 0;
+        text-shadow: 0 1px 0 oklch(0.15 0.01 212 / 0.8);
+    }
+    
+    .rsHoverable:not(.rsDisabled) .rangeHandle:hover::before {
+      box-shadow: 0 0 0 0.75em var(--handle-border);
+    }
+    
+    .rsHoverable:not(.rsDisabled) .rangeHandle.rsPress::before {
+      box-shadow: 0 0 0 1em var(--handle-border);
+    }
+    
+    .rangePips {
+        height: auto;
+        inset: 0;
+        z-index: 1;
+    }
+    .rsPip {
+        top: 0;
+        bottom: 0;
+        height: auto;
+    }
+    .rsPipVal {
+        color: var(--fg);
+        font-size: 1.6em;
+        opacity: 0.7;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-shadow: 0 1px 0 var(--bg);
+    }
+    .rsSelected .rsPipVal {
+        opacity: 1;
+    }
+}
+
+
+@property --gleam {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 50%;
+}
+@property --gleam-opacity {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@keyframes active {
+    0% {
+        --gleam: 0%;
+    }
+    66%,
+    100% {
+        --gleam: 180%;
+    }
+}
+
+
+
+#slider[data-style="rainbow"] .rangeBar::before {
+    background-image: linear-gradient(
+        to right in oklch,
+        oklch(0.88 0.2 334) -5%,
+        oklch(0.88 0.2 24),
+        oklch(0.88 0.2 55),
+        oklch(0.88 0.2 80),
+        oklch(0.88 0.2 110),
+        oklch(0.88 0.3 140),
+        oklch(0.88 0.25 150),
+        oklch(0.9 0.19 195),
+        oklch(0.7 0.17 267),
+        oklch(0.70 0.3 312) 105%
+    );
+}
+
+#slider[data-style="sunset"] .rangeBar::before {
+    background-image: linear-gradient(
+        to right in oklch,
+        oklch(0.78 0.14 304) -3%,
+        oklch(0.75 0.18 28) 12%,
+        oklch(0.79 0.16 55),
+        oklch(0.87 0.14 80) 80%,
+        oklch(0.96 0.1 90)
+    );
+}
+
+#slider[data-style="ice"] .rangeBar::before {
+    background-image: linear-gradient(
+        to right in oklch,
+        oklch(0.99 0.04 195),
+        oklch(0.84 0.14 195),
+        oklch(0.77 0.14 233),
+        oklch(0.73 0.14 262) 100%
+    );
+}
+
+#slider[data-style="slime"] .rangeBar::before {
+    background-image: linear-gradient(
+        to right,
+        oklch(0.74 0.16 300) 12%,
+        oklch(0.89 0.19 154) 40%,
+        oklch(0.92 0.18 131)
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    color-scheme: light;
+
+    --bg-light: hsl(220, 16%, 94%);
+    --bg-light2: hsl(212, 50%, 92%);
+    --bg-dark: hsl(222, 16%, 16%);
+    --bg-dark2: hsl(222, 20%, 18%);
+    --fg-light: hsl(212 22% 26%);
+    --fg-dark: hsl(222, 39%, 95%);
+    --link-light: hsl(222, 95%, 60%);
+    --link-dark: hsl(222, 95%, 70%);
+    --link-light-hover: hsl(150, 90%, 50%);
+    --link-dark-hover: hsl(150, 95%, 70%);
+    --input-bg-light: hsl(from var(--bg-light) h 15% 100%);
+    --input-bg-dark: hsl(from var(--bg-dark) h 15% 10%);
+    --input-border-light: hsl(from var(--bg-light) h 15% 85%);
+    --input-border-dark: hsl(from var(--bg-light) h 15% 35%);
+    --labels-light: hsl(from var(--fg-light) h 20% 55%);
+    --labels-dark: hsl(from var(--fg-dark) h 20% 55%);
+
+    /* color-scheme */
+    --bg: light-dark(var(--bg-light), var(--bg-dark));
+    --bg2: light-dark(var(--bg-light2), var(--bg-dark2));
+    --fg: light-dark(var(--fg-light), var(--fg-dark));
+    --link: light-dark(var(--link-light), var(--link-dark));
+    --linkh: light-dark(var(--link-light-hover), var(--link-dark-hover));
+    --labels: light-dark(
+        var(--labels-light),
+        var(--labels-dark)
+    ); /* form labels */
+    --b: light-dark(
+        var(--input-bg-light),
+        var(--input-bg-dark)
+    ); /* form element backgrounds */
+    --bor: light-dark(
+        var(--input-border-light),
+        var(--input-border-dark)
+    ); /* form element shadows */
+    --tint: light-dark(hsl(160, 85%, 60%), hsl(260, 85%, 60%));
+    --tint2: light-dark(hsl(200, 85%, 60%), hsl(300, 85%, 60%));
+
+    /* ease */
+    --cubic: cubic-bezier(0.66, 0, 0.34, 1);
+    --cubic-in: cubic-bezier(0.32, 0, 0.67, 0);
+    --cubic-out: cubic-bezier(0.33, 1, 0.68, 1);
+    --spring: linear(
+        0,
+        0.008 1.1%,
+        0.034 2.3%,
+        0.134 4.9%,
+        0.264 7.3%,
+        0.683 14.3%,
+        0.797 16.5%,
+        0.89 18.6%,
+        0.967 20.7%,
+        1.027 22.8%,
+        1.073 25%,
+        1.104 27.3%,
+        1.123 30.6%,
+        1.119 34.3%,
+        1.018 49.5%,
+        0.988 58.6%,
+        0.985 65.2%,
+        1 84.5%,
+        1
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** extra stuff **/
+
+body,
+html,
+#app {
+    display: grid;
+    min-height: 100%;
+}
+
+body {
+    --dot-color: light-dark(
+        hsl(from var(--bg) h s calc(l - 7) / 90%),
+        hsl(from var(--bg2) h s calc(l + 2) / 90%)
+    );
+    --bg-fade: light-dark(var(--bg2), var(--bg));
+
+    background-color: var(--bg2);
+    background-image: radial-gradient(var(--dot-color) 1.25px, transparent 0px),
+        linear-gradient(160deg, var(--bg), var(--bg-fade));
+    background-repeat: repeat, no-repeat;
+    background-size: 24px 24px, cover;
+    background-position: center;
+    padding: 0;
+    
+}
+
+#app {
+    min-height: 90svh;
+    width: var(--width);
+    margin: auto;
+    grid-template-rows:
+        auto min-content auto;
+}
+
+h1 {
+    place-content: end;
+    margin-bottom: 0;
+}
+
+aside {
+    margin-top: auto;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.field:has(.group.style) {
+    overflow-x: auto;
+    padding-bottom: 10px;
+    mask: linear-gradient(to left, transparent, black 30px calc(100% - 30px), transparent);
+    padding-inline: 30px;
+    scrollbar-width: thin;
+}
+
+.group.style {
+    margin: auto;
+}
