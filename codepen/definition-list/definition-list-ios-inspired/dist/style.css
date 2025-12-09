@@ -1,0 +1,44 @@
+html,
+body {
+  background: -webkit-linear-gradient(left, #e0e3ea 50%, #e3e6ec 50%);
+  background: -moz-linear-gradient(left, #e0e3ea 50%, #e3e6ec 50%);
+  background: linear-gradient(left, #e0e3ea 50%, #e3e6ec 50%);
+  background-size: 10px 10px;
+}
+#main {
+  margin-bottom: 2em;
+}
+.page-header {
+  border-bottom-color: #b0b4bc;
+}
+.ios-dl .legend {
+  display: block;
+  padding: 0;
+  margin: 20px 0px 0px;
+  font-size: 21px;
+  line-height: 40px;
+  color: #8B91A5;
+  font-weight: bold;
+}
+.ios-dl .definition-group {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #b0b4bc;
+  box-shadow: 0 1px 1px 0 white, 0 1px 1px 0 #d9dbdf inset;
+}
+.ios-dl dl {
+  padding: 1em;
+  margin: 0px;
+  background: transparent;
+  border-top: 1px solid #d9dbdf;
+}
+.ios-dl dl:first-child {
+  border: none;
+}
+.ios-dl dt {
+  color: #8b91a5;
+  font-weight: bold;
+}
+.ios-dl dd {
+  color: #555;
+}

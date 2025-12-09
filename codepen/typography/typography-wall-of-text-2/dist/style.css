@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  background: #011b2a;
+  background-color: #011b2a;
+  color: #dad8d8;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+article {
+  width: min(62ch, 100% - 2rem);
+}
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+article p,
+article aside,
+article article,
+article p,
+article .p,
+article div.p,
+article section,
+article h1,
+article h2,
+article h3 {
+  color: #eae8e8;
+}
+article h1,
+article h2 {
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 5rem 0 2rem;
+  line-height: 1.1;
+}
+article h3 {
+  font-size: 1.6rem;
+  margin: 2.5rem 0 0.5rem;
+  padding-top: 2rem;
+  position: relative;
+}
+article h3::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  width: calc(100% - 4rem);
+  height: 4px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAECAYAAABcDxXOAAAAAXNSR0IArs4c6QAAAChJREFUGFdjZICCI0eO/AcxbWxsGGFiMBosAFMAE0RXSLwiZNOwWQcAIGEQBa1PCxEAAAAASUVORK5CYII=) repeat;
+}
+article h1 {
+  font-size: 2.8rem;
+}
+article h2 {
+  font-size: 1.8rem;
+}
+article h2 {
+  background-color: #111;
+  color: #eee;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+article p,
+article div.p {
+  margin: 0 0 1.5rem;
+}
+article div.p {
+  position: relative;
+}
+article div.p aside {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(calc(100% + 1rem));
+  width: 24ch;
+  font-size: 0.8rem;
+  font-weight: 200;
+  line-height: 1.6;
+}
+article div.p aside > p {
+  margin: 0;
+}
+article section > p:nth-of-type(1) {
+  background-color: #eee;
+  padding: 1rem 1.5rem;
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.6;
+  border-left: 10px solid #062d43;
+}
+@media screen and (max-width: 103ch) {
+  article div.p aside {
+    position: relative;
+    right: unset;
+    top: unset;
+    transform: unset;
+    float: right;
+    margin: 1.6rem 0 1rem 1rem;
+  }
+}

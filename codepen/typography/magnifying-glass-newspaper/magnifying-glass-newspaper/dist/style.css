@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(45deg, grey 0% lightgray 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewer {
+  width: 800px;
+  height: 520px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.13);
+}
+.viewer .paper {
+  width: 100%;
+  height: 205%;
+  background: url(https://assets.codepen.io/439000/newspaper_texture2832.webp);
+  background-size: 800px auto;
+}
+.viewer .glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 190px;
+  border-radius: 32px;
+  background: url(https://assets.codepen.io/439000/newspaper_texture2832.webp);
+  background-size: 1600px 2132px;
+  pointer-events: none;
+  box-shadow: inset -20px 20px 40px rgba(255, 255, 255, 0.4), inset 20px -20px 40px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+.viewer .glass::before, .viewer .glass::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 32px;
+}
+.viewer .glass::before {
+  box-shadow: -6px 4px 4px rgba(0, 0, 0, 0.23);
+}
+.viewer .glass::after {
+  background-image: url(https://assets.codepen.io/439000/dirty-window-texture-11.webp);
+  background-size: cover;
+  mix-blend-mode: soft-light;
+  opacity: 0.9;
+}

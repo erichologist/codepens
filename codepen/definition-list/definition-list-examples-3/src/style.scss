@@ -1,0 +1,95 @@
+// Normalise
+html { box-sizing: border-box; }
+*, 
+*:before, 
+*:after { box-sizing: inherit; }
+body { padding: .5em 1em; }
+dl { margin: 0; }
+dt, dd { margin: 0; padding: 0.2em; }
+
+// v1
+DefinitionList-wrap { display: table; }
+
+.DefinitionList {
+  display: table-row; 
+
+  dt { 
+    font-weight: bold;
+    display: table-cell;
+  }
+}
+
+// v2
+.DefinitionGroup {
+  display: table; 
+
+  dt { 
+    font-weight: bold;
+    display: table-cell;
+
+    &:before {
+      content: ''; 
+      display: block;
+      height: 10px;
+      background: red;
+    }
+  }
+
+  dd {  }
+}
+
+// v3
+.DefinitionGroupAlt {
+  display: block; 
+  clear: both;
+
+  dt { 
+    font-weight: bold;
+    float: left;
+    clear: left;
+    width: 20%;
+  }
+
+  dd { 
+    margin-left: 20%;
+    width: 100%;
+  }
+}
+
+// v4
+.DefinitionGroupAltToo {
+  display: block;
+
+  dt { 
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    top: 1.5em;
+    width: 11em;
+  }
+
+  dd { margin-left: 12em; }
+}
+
+// v5
+.DefinitionGroupAltThree {
+  display: block;
+
+  dt { 
+    font-weight: bold;
+    display: inline-block;
+    width: 11em;
+  }
+
+  dd {
+    display: inline;
+    margin-left: 11.3em;
+    
+    &:after {
+      content: '\A';
+      white-space: pre;
+    }
+  }
+  
+  dt + dd { margin-left: 0; }
+}

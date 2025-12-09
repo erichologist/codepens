@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0.5em 1em;
+}
+
+dl {
+  margin: 0;
+}
+
+dt, dd {
+  margin: 0;
+  padding: 0.2em;
+}
+
+DefinitionList-wrap {
+  display: table;
+}
+
+.DefinitionList {
+  display: table-row;
+}
+.DefinitionList dt {
+  font-weight: bold;
+  display: table-cell;
+}
+
+.DefinitionGroup {
+  display: table;
+}
+.DefinitionGroup dt {
+  font-weight: bold;
+  display: table-cell;
+}
+.DefinitionGroup dt:before {
+  content: "";
+  display: block;
+  height: 10px;
+  background: red;
+}
+.DefinitionGroupAlt {
+  display: block;
+  clear: both;
+}
+.DefinitionGroupAlt dt {
+  font-weight: bold;
+  float: left;
+  clear: left;
+  width: 20%;
+}
+.DefinitionGroupAlt dd {
+  margin-left: 20%;
+  width: 100%;
+}
+
+.DefinitionGroupAltToo {
+  display: block;
+}
+.DefinitionGroupAltToo dt {
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  top: 1.5em;
+  width: 11em;
+}
+.DefinitionGroupAltToo dd {
+  margin-left: 12em;
+}
+
+.DefinitionGroupAltThree {
+  display: block;
+}
+.DefinitionGroupAltThree dt {
+  font-weight: bold;
+  display: inline-block;
+  width: 11em;
+}
+.DefinitionGroupAltThree dd {
+  display: inline;
+  margin-left: 11.3em;
+}
+.DefinitionGroupAltThree dd:after {
+  content: "\a";
+  white-space: pre;
+}
+.DefinitionGroupAltThree dt + dd {
+  margin-left: 0;
+}
