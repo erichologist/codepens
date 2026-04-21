@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes morph {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes distort {
+  0% {
+    filter: url(#noiseFilter);
+  }
+  50% {
+    filter: url(#noiseFilter);
+    transform: scale(1.02);
+  }
+  100% {
+    filter: url(#noiseFilter);
+  }
+}
+.glass-container {
+  animation: fadeIn 1s ease-in-out, morph 5s infinite alternate ease-in-out;
+}
+
+.noise-svg {
+  animation: distort 3s infinite alternate ease-in-out;
+}

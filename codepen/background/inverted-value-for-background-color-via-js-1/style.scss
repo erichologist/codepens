@@ -1,0 +1,12 @@
+@import "compass/css3";
+
+.box {
+  display: inline-block;
+  width: 3em; height: 3em;
+  background-color: #CCCCCC;
+}
+
+.box--inverted-css {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}

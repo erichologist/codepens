@@ -1,0 +1,26 @@
+:root {
+	--c1: #ee7752;
+	--c2: #e73c7e;
+	--c3: #23a6d5;
+	--c4: #23d5ab;
+	--c6: #00e9ff;
+	--c7: #b385ff;
+	--c8: #fdda9a;
+	--c9: #ff66a2;
+}
+body {
+	/*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+	background: linear-gradient(-45deg,var(--c6),var(--c7),var(--c8),var(--c9));
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+@-webkit-keyframes gradient {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}}
+@keyframes gradient {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}}

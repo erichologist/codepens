@@ -1,0 +1,452 @@
+body{background-color:#202020;}
+p.box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #CCCCCC;
+}
+
+.box--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+.box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #e5e6eb;
+}
+
+.box--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+
+
+
+
+
+
+.box_b {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #e5e6eb;
+}
+
+.box_b--inverted_b-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxc {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #a4a7ba;
+}
+
+.boxc--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxd {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #e5e6eb;
+}
+
+.boxd--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxe {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #555970;
+}
+
+.boxe--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxf {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #eeeeee;
+}
+
+.boxf--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxg {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.boxg--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxh {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.boxh--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxi {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(164, 167, 186, 0.7);
+}
+
+.boxi--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxj {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(164, 167, 186, 0.04);
+}
+
+.boxj--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxk {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.boxk--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxl {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(164, 167, 186, 0.7);
+}
+
+.boxl--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxm {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #e5e6eb;
+}
+
+.boxm--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxn {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.boxn--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxo {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(164, 167, 186, 0.3);
+}
+
+.boxo--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxp {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.boxp--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxq {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(164, 167, 186, 0.7);
+}
+
+.boxq--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxr {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #e5e6eb;
+}
+
+.boxr--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxs {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #aaaaaa;
+}
+
+.boxs--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxt {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(164, 167, 186, 0.8);
+}
+
+.boxt--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+
+.boxva {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #292a2b;
+}
+
+.boxva--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvb {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #efeeee;
+}
+
+.boxvb--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvc {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #585858;
+}
+
+.boxvc--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvd {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(88, 88, 88, 0.5);
+}
+
+.boxvd--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxve {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.boxve--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvf {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.boxvf--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvg {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.boxvg--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvh {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.boxvh--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvi {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.boxvi--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvj {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.boxvj--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvk {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 87, 34, 0.62);
+}
+
+.boxvk--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvl {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #efeeee;
+}
+
+.boxvl--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvm {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #2d171596;
+}
+
+.boxvm--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvn {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #585858;
+}
+
+.boxvn--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvo {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: #31462ea1;
+}
+
+.boxvo--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+.boxvp {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.boxvp--inverted-css {
+  filter: invert(100%) hue-rotate(180deg);
+  -webkit-filter: invert(100%) hue-rotate(180deg);
+}
+
+  

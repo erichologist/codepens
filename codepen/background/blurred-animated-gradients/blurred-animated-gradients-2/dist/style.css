@@ -1,0 +1,282 @@
+:root {
+	--code:			 #0EFFEE;--bg-dark5:var(--bg-drk5);
+	--hdmgnl:			-2.75%;--bg-dark4:var(--bg-drk4);
+	--bg-accent4:#353130;--bg-dark3:var(--bg-drk3);
+	--bg-bridge4:#2a2a2a;--bg-dark2:var(--bg-drk2);
+	--bg-drk5:	 #605957;--bg-dark:	 var(--bg-drk);
+	--bg-drk3:	 #101010;			--bg-drk4:	 #191919;
+	--bg-accent3:#353130;			--bg-drk2:	 #302D2C;
+	--bg-accent2:#403C3B;			--bg-bridge3:#2C2928;
+	--bg-accent: #363434CC;			--bg-bridge2:#353231;
+	--bg-drk:		 #191717CC;			--bg-bridge: #242222CC;
+
+  --size: 333px;
+  /*--speed: 150s;*/
+  --speed: 5s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+	--bg-lg:linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 70%),linear-gradient(90deg, var(--bg-drk), var(--bg-accent), var(--bg-bridge), var(--bg-drk));
+	--bg-lg2:linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 70%),linear-gradient(90deg, var(--bg-drk5), var(--bg-accent2), var(--bg-bridge2), var(--bg-bridge2), var(--bg-accent2), var(--bg-drk5));
+
+	--bg-dark:var(--bg-drk);
+	--bg-accent: #363434;	--bg-bridge: #242222;
+	--bg-drk:		 #191717;	--bg-dark:var(--bg-drk);
+	--hdmgnl:			-2.75%;
+	--bg-lg:linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.025) 50%, rgba(255,255,255,0) 70%),linear-gradient(90deg, var(--bg-drk), var(--bg-accent), var(--bg-bridge), var(--bg-drk));
+	--anim:shimmer 8s infinite linear, colorFlow 15s ease-in-out infinite;
+	--anim:shimmer 8s infinite linear, colorFlow 25s ease-in-out infinite, rotate var(--speed) ease-in-out infinite;
+	--bg-sz:200% 100%, 400% 100%; --sz-bg:var(--bg-sz);
+}
+html {
+    font-size: 2.2vw; /* Responsive fluid type */
+    margin: 0;
+    padding: 0;
+}
+
+/*  2. BODY & BACKGROUND LOGIC  ======= 
+====================================== */
+body {
+	box-sizing: border-box;
+
+	/*  MULTI-LAYER GRADIENT  ======= 
+	============================== */
+
+	/*background-image:var(--bg-lg);*/
+	background-color:linear-gradient(90deg, var(--bg-drk), var(--bg-accent), var(--bg-bridge), var(--bg-drk));
+	background-image:var(--bg-lg);
+	background-size:var(--bg-sz);
+	background-attachment:fixed;
+
+	/*ANIMATIONS: Shimmer (8s) and Color Flow (15s) */
+	animation:shimmer2 8s infinite linear, colorFlow2 25s ease-in-out infinite, rotate 26s ease-in-out infinite;
+	-webkit-animation:shimmer2 8s infinite linear, colorFlow2 25s ease-in-out infinite, rotate 26s ease-in-out infinite;
+	-moz-animation:shimmer2 8s infinite linear, colorFlow2 25s ease-in-out infinite, rotate 26s ease-in-out infinite;
+
+	color:var(--text);
+	font-family:var(--font-txt);
+	font-size:calc(var(--text-zoom) * 1%);
+	font-size: 16px;
+	font-weight:var(--text-wt);
+
+	margin: 0;
+	margin-bottom: calc( (var(--line-height) * 3rem) + (var(--footer-space) * 1rem) );
+	margin-left:auto;
+	margin-right:auto;
+
+	padding-left:auto;
+	padding-right:auto;
+	padding-bottom: calc( (var(--line-height) * 3rem) + (var(--footer-space) * 1rem) );
+	padding-inline: 1.5rem; /*Mobile breathing room */
+
+	min-height: 100vh;
+	width: 100%;
+
+	overflow-wrap: break-word;
+	text-rendering: optimizeLegibility;
+
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	font-smooth: always;
+	-webkit-font-smooth: always;
+	font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+/*  3. KEYFRAMES  ============ 
+=========================== */
+@keyframes shimmer2 {
+	0% { background-position:-200% 0, 0 0; }
+	100% { background-position:200% 0, 0 0; }
+}
+@keyframes colorFlow2 {
+	0% { background-position:0 0, 0% 50%; }
+	50% { background-position:0 0, 101% 50%; }
+	/*101% hides the seam*/
+	100% { background-position:0 0, 0% 50%; }
+}
+@keyframes shimmer2 {
+	0% { background-position:-200% 0, 0 0; }
+	50% { background-position:91% 100%}
+	100% { background-position:200% 0, 0 0; }
+}
+@keyframes shimmer2 {
+	0%{background-position:10% 0%}
+	50%{background-position:91% 100%}
+	100%{background-position:10% 0%}
+}
+/*  4. RESPONSIVE BREAKPOINTS  ======= 
+==================================== */
+/* Tablet/Desktop: Cap the width for readability */
+@media screen and (min-width: 1000px) {
+	html { font-size: 24px; }
+	body {
+	  max-width: 75ch;
+	  margin-inline: auto;/* Centers the layout */
+	}
+}
+@media screen and (max-width: 520px) {
+	html { font-size: 14px; }
+	body { 
+    font-size: 13px;
+    max-width:320px;
+  }
+}
+.gradient {
+  display: block;
+  /* --size: 750px;*/
+  --size: 333px;
+  /*--speed: 150s;*/
+  --speed: 25s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  width: var(--size);
+  height: var(--size);
+  filter: blur(calc(var(--size) / 5));
+
+  background-image:
+    linear-gradient(#4377ef44, #7befd022);
+  mix-blend-mode:hard-light;
+  mix-blend-mode:difference;
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  animation: rotate var(--speed) ease-in-out infinite;
+	animation:var(--anim);
+	-webkit-animation:var(--anim);
+	-moz-animation:var(--anim);
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+  border-radius: 30% 70% 70% 30%/70% 70% 70% 70%;
+  overflow-x: hidden;
+  z-index: 5;
+}
+@keyframes rotate {
+  0% {
+    transform: scale(1, 1) rotate(0deg);
+    filter: blur(calc(var(--size) / 5));
+  }
+  50% {
+    transform: scale(1.52, 1.52) rotate(360deg);
+    filter: blur(calc(var(--size) / 2.5));
+  }
+  100% {
+    transform: scale(1, 1) rotate(720deg);
+    filter: blur(calc(var(--size) / 5));
+  }
+}
+@media (min-width: 720px) {
+  .gradient {
+    --size: 500px;
+  }
+}
+body {
+  background: #000;
+  background-image: linear-gradient(#222, #1110);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@keyframes shimmer { 0% { background-position:-200% 0, 0 0; } 100% { background-position:200% 0, 0 0; } }
+@keyframes colorFlow { 0% { background-position:0 0, 0% 50%; } 50% { background-position:0 0, 101% 50%; } 100% { background-position:0 0, 0% 50%; } }
+@keyframes shimmer { 0% { background-position:-200% 0, 0 0; } 50% { background-position:91% 100%} 100% { background-position:200% 0, 0 0; } }
+@keyframes shimmer { 0%{ background-position:10% 0%} 50%{ background-position:91% 100%} 100%{ background-position:10% 0%} }
+@-webkit-keyframes shimmer { 0% { background-position:-200% 0, 0 0; } 100% { background-position:200% 0, 0 0; } } @-webkit-keyframes colorFlow { 0% { background-position:0 0, 0% 50%; } 50% { background-position:0 0, 101% 50%; } 100% { background-position:0 0, 0% 50%; } }
+@-moz-keyframes shimmer { 0% { background-position:-200% 0, 0 0; } 100% { background-position:200% 0, 0 0; } } @-moz-keyframes colorFlow { 0% { background-position:0 0, 0% 50%; } 50% { background-position:0 0, 101% 50%; } 100% { background-position:0 0, 0% 50%; } }
+/* This is just to transition when you change the viewport size. */
+* {
+  transition: all 0.5s ease-in-out;
+}
+html {
+    font-size: 2.2vw; /* Responsive fluid type */
+    margin: 0;
+    padding: 0;
+}
+
+/*  2. BODY & BACKGROUND LOGIC  ======= 
+====================================== */
+body {
+	box-sizing: border-box;
+
+	/*  MULTI-LAYER GRADIENT  ======= 
+	============================== */
+
+	/*background-image:var(--bg-lg);*/
+	background-color:linear-gradient(90deg, var(--bg-drk), var(--bg-accent), var(--bg-bridge), var(--bg-drk));
+	background-image:var(--bg-lg);
+	background-size:var(--bg-sz);
+	background-attachment:fixed;
+
+	/*ANIMATIONS: Shimmer (8s) and Color Flow (15s) */
+	animation:shimmer2 8s infinite linear, colorFlow2 25s ease-in-out infinite, rotate 26s ease-in-out infinite;
+	-webkit-animation:shimmer2 8s infinite linear, colorFlow2 25s ease-in-out infinite, rotate 26s ease-in-out infinite;
+	-moz-animation:shimmer2 8s infinite linear, colorFlow2 25s ease-in-out infinite, rotate 26s ease-in-out infinite;
+
+	color:var(--text);
+	font-family:var(--font-txt);
+	font-size:calc(var(--text-zoom) * 1%);
+	font-size: 16px;
+	font-weight:var(--text-wt);
+
+	margin: 0;
+	margin-bottom: calc( (var(--line-height) * 3rem) + (var(--footer-space) * 1rem) );
+	margin-left:auto;
+	margin-right:auto;
+
+	padding-left:auto;
+	padding-right:auto;
+	padding-bottom: calc( (var(--line-height) * 3rem) + (var(--footer-space) * 1rem) );
+	padding-inline: 1.5rem; /*Mobile breathing room */
+
+	min-height: 100vh;
+	width: 100%;
+
+	overflow-wrap: break-word;
+	text-rendering: optimizeLegibility;
+
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	font-smooth: always;
+	-webkit-font-smooth: always;
+	font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+/*  3. KEYFRAMES  ============ 
+=========================== */
+@keyframes shimmer2 {
+	0% { background-position:-200% 0, 0 0; }
+	100% { background-position:200% 0, 0 0; }
+}
+@keyframes colorFlow2 {
+	0% { background-position:0 0, 0% 50%; }
+	50% { background-position:0 0, 101% 50%; }
+	/*101% hides the seam*/
+	100% { background-position:0 0, 0% 50%; }
+}
+@keyframes shimmer2 {
+	0% { background-position:-200% 0, 0 0; }
+	50% { background-position:91% 100%}
+	100% { background-position:200% 0, 0 0; }
+}
+@keyframes shimmer2 {
+	0%{background-position:10% 0%}
+	50%{background-position:91% 100%}
+	100%{background-position:10% 0%}
+}
+/*  4. RESPONSIVE BREAKPOINTS  ======= 
+==================================== */
+/* Tablet/Desktop: Cap the width for readability */
+@media screen and (min-width: 1000px) {
+	html { font-size: 24px; }
+	body {
+	  max-width: 75ch;
+	  margin-inline: auto;/* Centers the layout */
+	}
+}
+@media screen and (max-width: 520px) {
+	html { font-size: 14px; }
+	body { 
+    font-size: 13px;
+    max-width:320px;
+  }
+}

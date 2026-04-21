@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Pure CSS Glassmorphism Liquid Glass UI kit</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="scene" aria-hidden="true">
+  <div class="scene__blob scene__blob--1"></div>
+  <div class="scene__blob scene__blob--2"></div>
+  <div class="scene__blob scene__blob--3"></div>
+</div>
+
+<!-- Theme toggle -->
+<button class="glass glass-btn theme-toggle-btn" id="theme-toggle" aria-label="Toggle colour scheme" title="Toggle light / dark mode">
+  <span class="icon-dark" aria-hidden="true">☀️</span>
+  <span class="icon-light" aria-hidden="true">🌙</span>
+</button>
+
+<!-- Toast region (ARIA live) -->
+<div class="glass-toast-region" id="toast-region" role="region" aria-label="Notifications" aria-live="polite"></div>
+
+<main class="page">
+
+  <!-- ─── HERO ─────────────────────────────────────────────────────────── -->
+  <header class="hero">
+    <span class="hero__kicker">Pure CSS · Glassmorphism · Liquid Glass</span>
+    <h1 class="hero__title">Liquid Glass<br>UI Kit</h1>
+    <p class="hero__sub">
+      Complete design token system, 15+ accessible components, light/dark mode, 12 animations — zero dependencies.
+    </p>
+
+    <div class="hero__cta">
+      <a href="#components" class="glass glass-btn glass-btn--primary">Explore Components →</a>
+      <a href="#animations" class="glass glass-btn glass-btn--ghost">View Animations</a>
+    </div>
+
+    <div class="container stats">
+      <div class="glass stats__item">
+        <div class="stats__num">15+</div>
+        <div class="stats__desc">Components</div>
+      </div>
+      <div class="glass stats__item">
+        <div class="stats__num">12</div>
+        <div class="stats__desc">Animations</div>
+      </div>
+      <div class="glass stats__item">
+        <div class="stats__num">a11y</div>
+        <div class="stats__desc">WCAG Compliant</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container page" id="components">
+
+    <!-- ─── CARDS ──────────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Glass Cards</h2>
+        <span class="section__subtitle">Hover to interact</span>
+      </div>
+      <div class="card-grid">
+        <div class="glass glass-card">
+          <div class="glass-card__label">Component · 01</div>
+          <h3 class="glass-card__title">Frosted Surface</h3>
+          <p class="glass-card__body">Backdrop-filter blur creates depth without obscuring the vibrant background.</p>
+          <div style="margin-top:20px"><span class="glass-badge glass-badge--aqua"><span class="glass-badge__dot"></span> Live</span></div>
+        </div>
+        <div class="glass glass--dark glass-card">
+          <div class="glass-card__label">Component · 02</div>
+          <h3 class="glass-card__title">Dark Glass</h3>
+          <p class="glass-card__body">Darker tint for contrast-rich surfaces. Ideal over bright backgrounds.</p>
+          <div style="margin-top:20px"><span class="glass-badge glass-badge--violet"><span class="glass-badge__dot"></span> Premium</span></div>
+        </div>
+        <div class="glass glass-card profile-card">
+          <div class="profile-card__avatar">🌊</div>
+          <div class="profile-card__name">Lyra Voss</div>
+          <div class="profile-card__role">UI Designer · Berlin</div>
+          <div class="progress-wrap" style="width:100%">
+            <div class="progress-label"><span>Projects</span><span>87%</span></div>
+            <div class="progress-bar">
+              <div class="progress-bar__fill" style="width:87%"></div>
+            </div>
+          </div>
+          <div class="progress-wrap" style="width:100%">
+            <div class="progress-label"><span>Clarity</span><span>94%</span></div>
+            <div class="progress-bar">
+              <div class="progress-bar__fill" style="width:94%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── BUTTONS ────────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Buttons</h2>
+        <span class="section__subtitle">Glass · Ghost · Accent · Danger · Sizes</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="btn-row">
+          <button class="glass glass-btn glass-btn--primary">Primary</button>
+          <button class="glass glass-btn glass-btn--ghost">Ghost</button>
+          <button class="glass glass-btn glass-btn--accent">Accent</button>
+          <button class="glass glass-btn glass-btn--danger">Danger</button>
+          <button class="glass glass-btn glass-btn--ghost" disabled>Disabled</button>
+        </div>
+        <div class="btn-row">
+          <button class="glass glass-btn glass-btn--primary glass-btn--sm">Small</button>
+          <button class="glass glass-btn glass-btn--primary">Default</button>
+          <button class="glass glass-btn glass-btn--primary glass-btn--lg">Large</button>
+        </div>
+        <div class="btn-row">
+          <div class="glass-tooltip-wrap">
+            <button class="glass glass-btn glass-btn--icon glass-btn--primary" aria-label="Favourite">✦</button>
+            <div class="glass glass-tooltip" role="tooltip">Favourite</div>
+          </div>
+          <div class="glass-tooltip-wrap">
+            <button class="glass glass-btn glass-btn--icon glass-btn--ghost" aria-label="Refresh">⟳</button>
+            <div class="glass glass-tooltip" role="tooltip">Refresh</div>
+          </div>
+          <div class="glass-tooltip-wrap">
+            <button class="glass glass-btn glass-btn--icon glass-btn--accent" aria-label="Upload">⬆</button>
+            <div class="glass glass-tooltip" role="tooltip">Upload</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── NAVIGATION + TABS ──────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Navigation & Tabs</h2>
+        <span class="section__subtitle">Pill nav · Tab panels · Toggle</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-xl)">
+        <nav class="glass glass-nav" aria-label="Main navigation">
+          <span class="glass-nav__item glass-nav__item--active" tabindex="0">Discover</span>
+          <span class="glass-nav__item" tabindex="0">Trending</span>
+          <span class="glass-nav__item" tabindex="0">Collections</span>
+          <span class="glass-nav__item" tabindex="0">Profile</span>
+        </nav>
+
+        <!-- Tabs with real content panels -->
+        <div class="glass-tabs" id="demo-tabs">
+          <div class="glass glass-tab-list" role="tablist" aria-label="Demo tabs">
+            <button class="glass-tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1">Overview</button>
+            <button class="glass-tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2">Specs</button>
+            <button class="glass-tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3">Examples</button>
+          </div>
+          <div id="tab-panel-1" class="glass glass-tab-panel is-active glass-card" role="tabpanel" aria-labelledby="tab-1">
+            <h3 class="glass-card__title">Overview</h3>
+            <p class="glass-card__body">Tab panels switch content without page navigation. Each panel is accessible via keyboard and ARIA roles, with an animated reveal on activation.</p>
+          </div>
+          <div id="tab-panel-2" class="glass glass-tab-panel glass-card" role="tabpanel" aria-labelledby="tab-2">
+            <h3 class="glass-card__title">Technical Specs</h3>
+            <p class="glass-card__body">Built on CSS custom properties with no JavaScript dependencies for pure display. The JS layer handles ARIA state updates and keyboard navigation (Arrow keys, Home, End).</p>
+          </div>
+          <div id="tab-panel-3" class="glass glass-tab-panel glass-card" role="tabpanel" aria-labelledby="tab-3">
+            <h3 class="glass-card__title">Example Panels</h3>
+            <p class="glass-card__body">Any content can live inside a tab panel — forms, data tables, cards, or rich media. The glass surface adapts to whatever's inside.</p>
+          </div>
+        </div>
+
+        <div class="glass glass-toggle" role="group" aria-label="View toggle">
+          <span class="glass-toggle__opt is-on" tabindex="0">Grid</span>
+          <span class="glass-toggle__opt" tabindex="0">List</span>
+          <span class="glass-toggle__opt" tabindex="0">Map</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── DROPDOWN ──────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Dropdown</h2>
+        <span class="section__subtitle">Custom menu · Keyboard accessible</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:var(--space-md);align-items:flex-start">
+
+        <div class="glass-dropdown" id="dd-actions">
+          <button class="glass glass-btn glass-btn--ghost glass-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Actions <span class="glass-dropdown-trigger-arrow">▾</span>
+          </button>
+          <div class="glass glass-dropdown-menu" role="menu">
+            <button class="glass-dropdown-item" role="menuitem">✏️ Edit</button>
+            <button class="glass-dropdown-item" role="menuitem">📋 Duplicate</button>
+            <button class="glass-dropdown-item" role="menuitem">🔗 Share</button>
+            <div class="glass-dropdown-divider"></div>
+            <button class="glass-dropdown-item glass-dropdown-item--danger" role="menuitem">🗑 Delete</button>
+          </div>
+        </div>
+
+        <div class="glass-dropdown" id="dd-sort">
+          <button class="glass glass-btn glass-btn--primary glass-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Sort by: Name <span class="glass-dropdown-trigger-arrow">▾</span>
+          </button>
+          <div class="glass glass-dropdown-menu" role="menu">
+            <button class="glass-dropdown-item is-active" role="menuitem">Name ↑</button>
+            <button class="glass-dropdown-item" role="menuitem">Name ↓</button>
+            <button class="glass-dropdown-item" role="menuitem">Date modified</button>
+            <button class="glass-dropdown-item" role="menuitem">File size</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── FORM CONTROLS ─────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Form Controls</h2>
+        <span class="section__subtitle">Checkbox · Radio · Switch · Select · Input</span>
+      </div>
+      <div class="glass glass-form">
+        <div class="glass-form__row">
+          <div>
+            <label>First Name</label>
+            <div class="glass-input-wrap">
+              <input class="glass-input" placeholder="Lyra" aria-label="First name">
+            </div>
+          </div>
+          <div>
+            <label>Last Name</label>
+            <div class="glass-input-wrap">
+              <input class="glass-input" placeholder="Voss" aria-label="Last name">
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-form__row glass-form__row--full">
+          <div>
+            <label>Email <span style="color:#f87171">*</span></label>
+            <div class="glass-input-wrap">
+              <input class="glass-input" type="email" placeholder="lyra@cosmos.io" aria-label="Email" required>
+              <span class="glass-input-icon">✉</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-form__row glass-form__row--full">
+          <div>
+            <label>Role</label>
+            <select class="glass-select" aria-label="Select role">
+              <option value="">Choose a role…</option>
+              <option value="design">UI Designer</option>
+              <option value="eng">Frontend Engineer</option>
+              <option value="pm">Product Manager</option>
+              <option value="motion">Motion Designer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="glass-form__row glass-form__row--full">
+          <div>
+            <label>Message</label>
+            <textarea class="glass-textarea" placeholder="Write something…" aria-label="Message"></textarea>
+          </div>
+        </div>
+
+        <div class="glass-form__row">
+          <div>
+            <label style="margin-bottom:var(--space-sm)">Interests</label>
+            <div class="glass-check-group">
+              <label class="glass-check-label">
+                <input type="checkbox" checked aria-label="Design">
+                <span class="glass-check-box"></span>
+                Design
+              </label>
+              <label class="glass-check-label">
+                <input type="checkbox" aria-label="Motion">
+                <span class="glass-check-box"></span>
+                Motion
+              </label>
+              <label class="glass-check-label">
+                <input type="checkbox" checked aria-label="Frontend">
+                <span class="glass-check-box"></span>
+                Frontend
+              </label>
+            </div>
+          </div>
+          <div>
+            <label style="margin-bottom:var(--space-sm)">Preferred contact</label>
+            <div class="glass-check-group">
+              <label class="glass-check-label">
+                <input type="radio" name="contact" value="email" checked aria-label="Email">
+                <span class="glass-radio-box"></span>
+                Email
+              </label>
+              <label class="glass-check-label">
+                <input type="radio" name="contact" value="slack" aria-label="Slack">
+                <span class="glass-radio-box"></span>
+                Slack
+              </label>
+              <label class="glass-check-label">
+                <input type="radio" name="contact" value="phone" aria-label="Phone">
+                <span class="glass-radio-box"></span>
+                Phone
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-form__row">
+          <div>
+            <label style="margin-bottom:var(--space-sm)">Preferences</label>
+            <div style="display:flex;flex-direction:column;gap:var(--space-sm)">
+              <label class="glass-switch-label">
+                <input type="checkbox" checked aria-label="Email notifications">
+                <span class="glass-switch-track"><span class="glass-switch-thumb"></span></span>
+                Email notifications
+              </label>
+              <label class="glass-switch-label">
+                <input type="checkbox" aria-label="Dark mode">
+                <span class="glass-switch-track"><span class="glass-switch-thumb"></span></span>
+                Dark mode
+              </label>
+              <label class="glass-switch-label">
+                <input type="checkbox" checked aria-label="Analytics">
+                <span class="glass-switch-track"><span class="glass-switch-thumb"></span></span>
+                Analytics
+              </label>
+            </div>
+          </div>
+          <div>
+            <label>Blur intensity <span id="blur-val">50</span>%</label>
+            <input class="glass-range" type="range" min="0" max="100" value="50" aria-label="Blur intensity" oninput="document.getElementById('blur-val').textContent=this.value">
+          </div>
+        </div>
+
+        <button class="glass glass-btn glass-btn--primary" style="width:100%;justify-content:center" type="submit">
+          Submit Form
+        </button>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── ACCORDION ─────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Accordion</h2>
+        <span class="section__subtitle">Click to expand</span>
+      </div>
+      <div class="glass-accordion" id="accordion">
+
+        <div class="glass glass-accordion-item is-open">
+          <button class="glass-accordion-trigger" aria-expanded="true" aria-controls="acc-1">
+            What is Liquid Glass?
+            <span class="glass-accordion-icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="glass-accordion-body" id="acc-1" role="region">
+            <div class="glass-accordion-content">
+              Liquid Glass is a CSS design language built around backdrop-filter blur, translucent surfaces, and reflective gradients — creating the illusion of physical depth on digital screens.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass glass-accordion-item">
+          <button class="glass-accordion-trigger" aria-expanded="false" aria-controls="acc-2">
+            Browser support?
+            <span class="glass-accordion-icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="glass-accordion-body" id="acc-2" role="region">
+            <div class="glass-accordion-content">
+              backdrop-filter is supported in all modern browsers. A <code style="opacity:.8">@supports</code> fallback is included for older Firefox, providing a semi-transparent solid surface instead of blur.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass glass-accordion-item">
+          <button class="glass-accordion-trigger" aria-expanded="false" aria-controls="acc-3">
+            How do I theme it?
+            <span class="glass-accordion-icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="glass-accordion-body" id="acc-3" role="region">
+            <div class="glass-accordion-content">
+              All values are CSS custom properties. Toggle <code style="opacity:.8">data-theme="light"</code> on the <code style="opacity:.8">&lt;html&gt;</code> element to switch the entire palette instantly. Override individual tokens in a local scope for component-level theming.
+            </div>
+          </div>
+        </div>
+
+        <div class="glass glass-accordion-item">
+          <button class="glass-accordion-trigger" aria-expanded="false" aria-controls="acc-4">
+            Is it accessible?
+            <span class="glass-accordion-icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="glass-accordion-body" id="acc-4" role="region">
+            <div class="glass-accordion-content">
+              Yes. All interactive elements have ARIA roles, keyboard support, and visible :focus-visible outlines. prefers-reduced-motion disables all animations. Colour contrast meets WCAG AA on both themes.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── STEPPER ────────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Stepper</h2>
+        <span class="section__subtitle">Multi-step flow · Horizontal &amp; vertical</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-2xl)">
+
+        <div>
+          <p class="section__subtitle" style="margin-bottom:var(--space-md)">Horizontal stepper</p>
+          <div class="glass-stepper" id="stepper-h">
+            <div class="glass-step is-complete">
+              <div class="glass-step__inner" style="display:flex;align-items:center;gap:8px">
+                <div class="glass-step__node" aria-label="Step 1: Account — complete">✓</div>
+                <span class="glass-step__label">Account</span>
+              </div>
+              <div class="glass-step__connector"></div>
+            </div>
+            <div class="glass-step is-complete">
+              <div class="glass-step__inner" style="display:flex;align-items:center;gap:8px">
+                <div class="glass-step__node" aria-label="Step 2: Profile — complete">✓</div>
+                <span class="glass-step__label">Profile</span>
+              </div>
+              <div class="glass-step__connector"></div>
+            </div>
+            <div class="glass-step is-active">
+              <div class="glass-step__inner" style="display:flex;align-items:center;gap:8px">
+                <div class="glass-step__node" aria-label="Step 3: Billing — current" aria-current="step">3</div>
+                <span class="glass-step__label">Billing</span>
+              </div>
+              <div class="glass-step__connector"></div>
+            </div>
+            <div class="glass-step">
+              <div class="glass-step__inner" style="display:flex;align-items:center;gap:8px">
+                <div class="glass-step__node" aria-label="Step 4: Review — pending">4</div>
+                <span class="glass-step__label">Review</span>
+              </div>
+            </div>
+          </div>
+          <div class="btn-row" style="margin-top:var(--space-md)">
+            <button class="glass glass-btn glass-btn--ghost glass-btn--sm" id="stepper-prev">← Prev</button>
+            <button class="glass glass-btn glass-btn--primary glass-btn--sm" id="stepper-next">Next →</button>
+          </div>
+        </div>
+
+        <div>
+          <p class="section__subtitle" style="margin-bottom:var(--space-md)">Vertical stepper</p>
+          <div class="glass-stepper glass-stepper--vertical">
+            <div class="glass-step is-complete">
+              <div class="glass-step__inner">
+                <div class="glass-step__node" aria-label="Step 1 — complete">✓</div>
+                <span class="glass-step__label">Create account</span>
+              </div>
+              <div class="glass-step__connector"></div>
+            </div>
+            <div class="glass-step is-active">
+              <div class="glass-step__inner">
+                <div class="glass-step__node" aria-label="Step 2 — current" aria-current="step">2</div>
+                <span class="glass-step__label">Verify email</span>
+              </div>
+              <div class="glass-step__connector"></div>
+            </div>
+            <div class="glass-step">
+              <div class="glass-step__inner">
+                <div class="glass-step__node" aria-label="Step 3 — pending">3</div>
+                <span class="glass-step__label">Set up workspace</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── DATA TABLE ─────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Data Table</h2>
+        <span class="section__subtitle">Sortable · Hover rows · Status badges</span>
+      </div>
+      <div class="glass glass-table-wrap" id="data-table-wrap">
+
+        <!-- Toolbar -->
+        <div class="glass-table-toolbar">
+          <span class="glass-table-toolbar__title">Team Members</span>
+          <span class="glass-table-toolbar__count" id="tbl-count">5 members</span>
+          <div class="glass-table-search">
+            <span class="glass-table-search__icon">🔍</span>
+            <input class="glass-table-search__input" type="search" placeholder="Search members…" id="tbl-search" aria-label="Search members">
+          </div>
+          <button class="glass glass-btn glass-btn--ghost glass-btn--sm" id="tbl-add-btn" style="white-space:nowrap">+ Invite</button>
+        </div>
+
+        <!-- Bulk action bar -->
+        <div class="glass-table-bulk" id="tbl-bulk" role="status" aria-live="polite">
+          <span class="glass-table-bulk__count" id="tbl-bulk-count">0 selected</span>
+          <button class="glass glass-btn glass-btn--ghost glass-btn--sm">📋 Export</button>
+          <button class="glass glass-btn glass-btn--danger glass-btn--sm">🗑 Remove</button>
+          <button class="glass glass-btn glass-btn--ghost glass-btn--sm" id="tbl-deselect" style="margin-left:auto">✕ Clear</button>
+        </div>
+
+        <!-- Table -->
+        <table class="glass-table" id="glass-table" aria-label="Team members">
+          <thead>
+            <tr>
+              <th class="col-check" scope="col">
+                <input type="checkbox" class="glass-table-check" id="tbl-check-all" aria-label="Select all rows">
+              </th>
+              <th scope="col" data-col="name" class="is-sorted">
+                Member <span class="glass-table__sort-icon">↑</span>
+              </th>
+              <th scope="col" data-col="role">Role</th>
+              <th scope="col" data-col="status">Status</th>
+              <th scope="col" data-col="projects" class="glass-table__cell--num">
+                Projects <span class="glass-table__sort-icon">↕</span>
+              </th>
+              <th scope="col" data-col="score" class="glass-table__cell--num">
+                Score <span class="glass-table__sort-icon">↕</span>
+              </th>
+              <th scope="col" style="width:48px"></th>
+            </tr>
+          </thead>
+          <tbody id="tbl-body">
+            <tr data-id="1">
+              <td class="col-check" data-label="Select">
+                <input type="checkbox" class="glass-table-check" aria-label="Select Lyra Voss">
+              </td>
+              <td data-label="Member">
+                <div class="glass-table-member">
+                  <div class="glass-table-avatar" style="background:linear-gradient(135deg,#e8a87c,#d4845a)">👩</div>
+                  <div class="glass-table-member__info">
+                    <span class="glass-table-member__name">Lyra Voss</span>
+                    <span class="glass-table-member__email">lyra@cosmos.io</span>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Role">UI Designer</td>
+              <td data-label="Status"><span class="glass-badge glass-badge--lime"><span class="glass-badge__dot"></span>Online</span></td>
+              <td class="glass-table__cell--num" data-label="Projects">12</td>
+              <td class="glass-table__cell--num" data-label="Score">
+                <div class="glass-table-score">
+                  <div class="glass-table-score__bar">
+                    <div class="glass-table-score__fill" style="width:97%"></div>
+                  </div>
+                  <span class="glass-table-score__num">97</span>
+                </div>
+              </td>
+              <td>
+                <button class="glass-table-action" aria-label="Actions for Lyra Voss">⋯</button>
+              </td>
+            </tr>
+
+            <tr data-id="2">
+              <td class="col-check" data-label="Select">
+                <input type="checkbox" class="glass-table-check" aria-label="Select Marc Dubois">
+              </td>
+              <td data-label="Member">
+                <div class="glass-table-member">
+                  <div class="glass-table-avatar" style="background:linear-gradient(135deg,#6baed6,#3182bd)">👨‍💻</div>
+                  <div class="glass-table-member__info">
+                    <span class="glass-table-member__name">Marc Dubois</span>
+                    <span class="glass-table-member__email">marc@cosmos.io</span>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Role">Frontend Eng</td>
+              <td data-label="Status"><span class="glass-badge glass-badge--lime"><span class="glass-badge__dot"></span>Online</span></td>
+              <td class="glass-table__cell--num" data-label="Projects">8</td>
+              <td class="glass-table__cell--num" data-label="Score">
+                <div class="glass-table-score">
+                  <div class="glass-table-score__bar">
+                    <div class="glass-table-score__fill" style="width:89%"></div>
+                  </div>
+                  <span class="glass-table-score__num">89</span>
+                </div>
+              </td>
+              <td>
+                <button class="glass-table-action" aria-label="Actions for Marc Dubois">⋯</button>
+              </td>
+            </tr>
+
+            <tr data-id="3">
+              <td class="col-check" data-label="Select">
+                <input type="checkbox" class="glass-table-check" aria-label="Select Sara Kim">
+              </td>
+              <td data-label="Member">
+                <div class="glass-table-member">
+                  <div class="glass-table-avatar" style="background:linear-gradient(135deg,#f7b7d3,#e06fa4)">👩‍🎨</div>
+                  <div class="glass-table-member__info">
+                    <span class="glass-table-member__name">Sara Kim</span>
+                    <span class="glass-table-member__email">sara@cosmos.io</span>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Role">Motion</td>
+              <td data-label="Status"><span class="glass-badge glass-badge--amber">Away</span></td>
+              <td class="glass-table__cell--num" data-label="Projects">5</td>
+              <td class="glass-table__cell--num" data-label="Score">
+                <div class="glass-table-score">
+                  <div class="glass-table-score__bar">
+                    <div class="glass-table-score__fill" style="width:84%"></div>
+                  </div>
+                  <span class="glass-table-score__num">84</span>
+                </div>
+              </td>
+              <td>
+                <button class="glass-table-action" aria-label="Actions for Sara Kim">⋯</button>
+              </td>
+            </tr>
+
+            <tr data-id="4">
+              <td class="col-check" data-label="Select">
+                <input type="checkbox" class="glass-table-check" aria-label="Select Omar Reyes">
+              </td>
+              <td data-label="Member">
+                <div class="glass-table-member">
+                  <div class="glass-table-avatar" style="background:linear-gradient(135deg,#9ecb8a,#4c9e3f)">👨‍🔬</div>
+                  <div class="glass-table-member__info">
+                    <span class="glass-table-member__name">Omar Reyes</span>
+                    <span class="glass-table-member__email">omar@cosmos.io</span>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Role">Backend Eng</td>
+              <td data-label="Status"><span class="glass-badge glass-badge--violet">Offline</span></td>
+              <td class="glass-table__cell--num" data-label="Projects">9</td>
+              <td class="glass-table__cell--num" data-label="Score">
+                <div class="glass-table-score">
+                  <div class="glass-table-score__bar">
+                    <div class="glass-table-score__fill" style="width:91%"></div>
+                  </div>
+                  <span class="glass-table-score__num">91</span>
+                </div>
+              </td>
+              <td>
+                <button class="glass-table-action" aria-label="Actions for Omar Reyes">⋯</button>
+              </td>
+            </tr>
+
+            <tr data-id="5">
+              <td class="col-check" data-label="Select">
+                <input type="checkbox" class="glass-table-check" aria-label="Select Ines Hartmann">
+              </td>
+              <td data-label="Member">
+                <div class="glass-table-member">
+                  <div class="glass-table-avatar" style="background:linear-gradient(135deg,#c5b0e8,#8a63cc)">👩‍💼</div>
+                  <div class="glass-table-member__info">
+                    <span class="glass-table-member__name">Ines Hartmann</span>
+                    <span class="glass-table-member__email">ines@cosmos.io</span>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Role">Product</td>
+              <td data-label="Status"><span class="glass-badge glass-badge--lime"><span class="glass-badge__dot"></span>Online</span></td>
+              <td class="glass-table__cell--num" data-label="Projects">14</td>
+              <td class="glass-table__cell--num" data-label="Score">
+                <div class="glass-table-score">
+                  <div class="glass-table-score__bar">
+                    <div class="glass-table-score__fill" style="width:99%"></div>
+                  </div>
+                  <span class="glass-table-score__num">99</span>
+                </div>
+              </td>
+              <td>
+                <button class="glass-table-action" aria-label="Actions for Ines Hartmann">⋯</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="glass-table-pagination">
+          <span class="glass-table-pagination__info" id="tbl-page-info">Showing 1–5 of 5</span>
+          <div class="glass-table-pagination__controls">
+            <button class="glass-table-page-btn" id="tbl-prev" aria-label="Previous page" disabled>‹</button>
+            <button class="glass-table-page-btn is-active" aria-label="Page 1" aria-current="page">1</button>
+            <button class="glass-table-page-btn" aria-label="Page 2">2</button>
+            <button class="glass-table-page-btn" aria-label="Page 3">3</button>
+            <button class="glass-table-page-btn" id="tbl-next" aria-label="Next page">›</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── TOAST ─────────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Toast / Snackbar</h2>
+        <span class="section__subtitle">Animated entry · Auto-dismiss · Click to close</span>
+      </div>
+      <div class="toast-demo-row">
+        <button class="glass glass-btn glass-btn--ghost" data-toast="success" data-toast-title="Saved!" data-toast-desc="Your changes have been saved.">✓ Success</button>
+        <button class="glass glass-btn glass-btn--ghost" data-toast="error" data-toast-title="Error" data-toast-desc="Something went wrong. Try again.">✕ Error</button>
+        <button class="glass glass-btn glass-btn--ghost" data-toast="warning" data-toast-title="Warning" data-toast-desc="You're running low on storage.">⚠ Warning</button>
+        <button class="glass glass-btn glass-btn--ghost" data-toast="info" data-toast-title="New update" data-toast-desc="v2.1.0 is available now.">ℹ Info</button>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── BADGES & TAGS ──────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Badges &amp; Tags</h2>
+        <span class="section__subtitle">All colour variants</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-md)">
+        <div class="btn-row">
+          <span class="glass-badge glass-badge--aqua"><span class="glass-badge__dot"></span>Active</span>
+          <span class="glass-badge glass-badge--violet"><span class="glass-badge__dot"></span>Premium</span>
+          <span class="glass-badge glass-badge--rose">New</span>
+          <span class="glass-badge glass-badge--amber">Beta</span>
+          <span class="glass-badge glass-badge--lime"><span class="glass-badge__dot"></span>Online</span>
+          <span class="glass-badge glass-badge--error">Error</span>
+        </div>
+        <div class="tags-row">
+          <span class="glass-tag">glassmorphism</span>
+          <span class="glass-tag">liquid glass</span>
+          <span class="glass-tag">backdrop-filter</span>
+          <span class="glass-tag">blur effects</span>
+          <span class="glass-tag">CSS animations</span>
+          <span class="glass-tag">zero deps</span>
+          <span class="glass-tag">WCAG 2.1 AA</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── NOTIFICATIONS ─────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Notifications</h2>
+        <span class="section__subtitle">Hover to slide</span>
+      </div>
+      <div>
+        <div class="glass notif" role="alert">
+          <div class="notif__icon notif__icon--aqua">🌊</div>
+          <div>
+            <div class="notif__title">New message from Lyra</div>
+            <div class="notif__desc">The glass effect looks stunning on mobile…</div>
+          </div>
+          <span class="notif__time">2m ago</span>
+        </div>
+        <div class="glass notif">
+          <div class="notif__icon notif__icon--violet">⚡</div>
+          <div>
+            <div class="notif__title">Build complete</div>
+            <div class="notif__desc">UI Kit compiled successfully — 0 errors.</div>
+          </div>
+          <span class="notif__time">8m ago</span>
+        </div>
+        <div class="glass notif">
+          <div class="notif__icon notif__icon--amber">✦</div>
+          <div>
+            <div class="notif__title">New component added</div>
+            <div class="notif__desc">glass-modal is ready. Check the docs.</div>
+          </div>
+          <span class="notif__time">1h ago</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── MODAL ─────────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Modal</h2>
+        <span class="section__subtitle">Focus trap · ARIA · Liquid entry</span>
+      </div>
+      <button class="glass glass-btn glass-btn--primary" id="modal-open">Open Modal →</button>
+    </section>
+
+    <div class="glass-modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" inert>
+      <div class="glass-modal">
+        <button class="glass-modal__close" id="modal-close" aria-label="Close dialog">✕</button>
+
+        <div class="glass-modal__header">
+          <div class="glass-card__label">Dialog · Liquid Glass</div>
+          <h3 class="glass-card__title" id="modal-title">Frosted Overlay</h3>
+        </div>
+
+        <div class="glass-modal__body">
+          <p class="glass-card__body">This modal uses a dedicated opaque surface — not a transparent glass panel — so text is always readable regardless of what's behind it. An accent gradient stripe marks the top edge, and the entry uses a liquid spring curve.</p>
+          <div style="margin-top:var(--space-md); padding:var(--space-md); border-radius:var(--radius-md); background:rgba(94,231,223,.08); border:1px solid rgba(94,231,223,.18);">
+            <p style="font-size:var(--text-sm); opacity:.80; line-height:1.6;">Focus is trapped inside while the modal is open. <kbd style="padding:2px 6px; border-radius:4px; font-size:.75rem; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.1)">Tab</kbd> cycles through buttons, <kbd style="padding:2px 6px; border-radius:4px; font-size:.75rem; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.1)">Esc</kbd> closes.</p>
+          </div>
+        </div>
+
+        <div class="glass-modal__footer">
+          <button class="glass glass-btn glass-btn--primary" id="modal-confirm">Confirm</button>
+          <button class="glass glass-btn glass-btn--ghost" id="modal-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ─── SKELETON ──────────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Skeleton Loader</h2>
+        <span class="section__subtitle">Shimmer state for async content</span>
+      </div>
+      <div class="card-grid">
+        <!-- Skeleton card -->
+        <div class="glass skeleton-layout">
+          <div class="skeleton-row">
+            <div class="skeleton skeleton--circle" style="width:48px;height:48px;flex-shrink:0"></div>
+            <div class="skeleton-lines">
+              <div class="skeleton skeleton--text" style="width:70%"></div>
+              <div class="skeleton skeleton--text" style="width:45%"></div>
+            </div>
+          </div>
+          <div class="skeleton skeleton--text" style="width:100%"></div>
+          <div class="skeleton skeleton--text" style="width:88%"></div>
+          <div class="skeleton skeleton--text" style="width:65%"></div>
+          <div class="skeleton skeleton--text" style="width:40%;height:28px;border-radius:var(--radius-full)"></div>
+        </div>
+        <!-- Second skeleton -->
+        <div class="glass skeleton-layout">
+          <div class="skeleton skeleton--heading" style="width:60%"></div>
+          <div class="skeleton skeleton--text" style="width:100%;height:120px;border-radius:var(--radius-md)"></div>
+          <div class="skeleton-row" style="gap:8px">
+            <div class="skeleton skeleton--text" style="width:80px;height:24px;border-radius:var(--radius-full)"></div>
+            <div class="skeleton skeleton--text" style="width:60px;height:24px;border-radius:var(--radius-full)"></div>
+          </div>
+        </div>
+        <!-- Third skeleton -->
+        <div class="glass skeleton-layout">
+          <div class="skeleton skeleton--text" style="width:100%;height:160px;border-radius:var(--radius-lg)"></div>
+          <div class="skeleton-row" style="gap:8px">
+            <div class="skeleton skeleton--circle" style="width:32px;height:32px;flex-shrink:0"></div>
+            <div class="skeleton skeleton--circle" style="width:32px;height:32px;flex-shrink:0"></div>
+            <div class="skeleton skeleton--circle" style="width:32px;height:32px;flex-shrink:0"></div>
+          </div>
+          <div class="skeleton skeleton--text" style="width:50%"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── CHIPS ─────────────────────────────────────────────────────── -->
+    <section class="section" id="chips">
+      <div class="section__header">
+        <h2 class="section__title">Chips</h2>
+        <span class="section__subtitle">Dismissible · Selectable · Dynamic</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-xl)">
+        <div>
+          <p class="section__subtitle" style="margin-bottom:14px">Colour variants</p>
+          <div class="glass-chip-group">
+            <span class="glass glass-chip glass-chip--aqua is-entering">
+              <span class="glass-chip__icon">🌊</span>
+              <span class="glass-chip__label">Aqua</span>
+              <span class="glass-chip__dismiss" role="button" aria-label="Remove Aqua">✕</span>
+            </span>
+            <span class="glass glass-chip glass-chip--violet is-entering" style="animation-delay:.06s">
+              <span class="glass-chip__icon">⚡</span>
+              <span class="glass-chip__label">Violet</span>
+              <span class="glass-chip__dismiss" role="button" aria-label="Remove Violet">✕</span>
+            </span>
+            <span class="glass glass-chip glass-chip--rose is-entering" style="animation-delay:.12s">
+              <span class="glass-chip__icon">🌸</span>
+              <span class="glass-chip__label">Rose</span>
+              <span class="glass-chip__dismiss" role="button" aria-label="Remove Rose">✕</span>
+            </span>
+            <span class="glass glass-chip glass-chip--amber is-entering" style="animation-delay:.18s">
+              <span class="glass-chip__icon">✦</span>
+              <span class="glass-chip__label">Amber</span>
+              <span class="glass-chip__dismiss" role="button" aria-label="Remove Amber">✕</span>
+            </span>
+          </div>
+        </div>
+        <div>
+          <p class="section__subtitle" style="margin-bottom:14px">Selectable filter chips</p>
+          <div class="glass-chip-group" id="filter-chips" role="group" aria-label="Filter chips">
+            <span class="glass glass-chip js-selectable" role="checkbox" aria-checked="false" tabindex="0" data-value="design"><span class="glass-chip__label">Design</span></span>
+            <span class="glass glass-chip js-selectable is-selected" role="checkbox" aria-checked="true" tabindex="0" data-value="frontend"><span class="glass-chip__label">Frontend</span></span>
+            <span class="glass glass-chip js-selectable" role="checkbox" aria-checked="false" tabindex="0" data-value="motion"><span class="glass-chip__label">Motion</span></span>
+            <span class="glass glass-chip js-selectable" role="checkbox" aria-checked="false" tabindex="0" data-value="3d"><span class="glass-chip__label">3D</span></span>
+            <span class="glass glass-chip js-selectable is-selected" role="checkbox" aria-checked="true" tabindex="0" data-value="glassmorphism"><span class="glass-chip__label">Glassmorphism</span></span>
+          </div>
+        </div>
+        <div>
+          <p class="section__subtitle" style="margin-bottom:14px">Dynamic — dismiss or add new</p>
+          <div class="glass-chip-group" id="dynamic-chips" aria-label="Dynamic chips">
+            <span class="glass glass-chip" data-chip><span class="glass-chip__icon">🎨</span><span class="glass-chip__label">Illustrator</span><span class="glass-chip__dismiss" role="button" aria-label="Remove Illustrator">✕</span></span>
+            <span class="glass glass-chip" data-chip><span class="glass-chip__icon">🖥</span><span class="glass-chip__label">Figma</span><span class="glass-chip__dismiss" role="button" aria-label="Remove Figma">✕</span></span>
+            <span class="glass glass-chip" data-chip><span class="glass-chip__icon">✏️</span><span class="glass-chip__label">Sketch</span><span class="glass-chip__dismiss" role="button" aria-label="Remove Sketch">✕</span></span>
+            <button class="glass-chip-add" id="chip-add-btn" title="Add chip" aria-label="Add chip">+</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── AVATAR GROUP ──────────────────────────────────────────────── -->
+    <section class="section" id="avatars">
+      <div class="section__header">
+        <h2 class="section__title">Avatar Group</h2>
+        <span class="section__subtitle">Photos · Initials · Status · Overflow · Sizes</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-2xl)">
+        <div>
+          <p class="section__subtitle" style="margin-bottom:18px">Photo avatars — hover for name card</p>
+          <div class="glass-avatar-group">
+            <div class="glass-avatar glass-avatar--photo" style="--from:#e8a87c;--to:#d4845a" tabindex="0" aria-label="Lyra Voss, UI Design, online">
+              <div class="glass-avatar__face">👩</div>
+              <span class="glass-avatar__status glass-avatar__status--online"></span>
+              <div class="glass glass-avatar-popover" aria-hidden="true">Lyra Voss<br><span style="opacity:.5;font-size:.72rem">UI Design</span></div>
+            </div>
+            <div class="glass-avatar glass-avatar--photo" style="--from:#6baed6;--to:#3182bd" tabindex="0" aria-label="Marc Dubois, Frontend, online">
+              <div class="glass-avatar__face">👨‍💻</div>
+              <span class="glass-avatar__status glass-avatar__status--online"></span>
+              <div class="glass glass-avatar-popover" aria-hidden="true">Marc Dubois<br><span style="opacity:.5;font-size:.72rem">Frontend</span></div>
+            </div>
+            <div class="glass-avatar glass-avatar--photo" style="--from:#f7b7d3;--to:#e06fa4" tabindex="0" aria-label="Sara Kim, Motion, away">
+              <div class="glass-avatar__face">👩‍🎨</div>
+              <span class="glass-avatar__status glass-avatar__status--away"></span>
+              <div class="glass glass-avatar-popover" aria-hidden="true">Sara Kim<br><span style="opacity:.5;font-size:.72rem">Motion</span></div>
+            </div>
+            <div class="glass-avatar glass-avatar--overflow" style="z-index:5" tabindex="0" aria-label="7 more members">
+              <div class="glass-avatar__face">+7</div>
+              <div class="glass glass-avatar-popover glass-avatar-popover--list" aria-hidden="true">
+                <ul class="glass-avatar-popover__list">
+                  <li class="glass-avatar-popover__item">
+                    <div class="glass-avatar-popover__mini" style="background:linear-gradient(135deg,#5ee7df,#3b82f6)">JL</div><span>Jin Lee</span>
+                  </li>
+                  <li class="glass-avatar-popover__item">
+                    <div class="glass-avatar-popover__mini" style="background:linear-gradient(135deg,#f7a8c4,#b490f5)">AP</div><span>Anya Park</span>
+                  </li>
+                  <li class="glass-avatar-popover__item" style="opacity:.45;font-size:.72rem;padding-left:34px">+5 more…</li>
+                </ul>
+              </div>
+            </div>
+            <span class="glass-avatar-group__meta">10 members · 3 online</span>
+          </div>
+        </div>
+        <div>
+          <p class="section__subtitle" style="margin-bottom:18px">Size variants</p>
+          <div style="display:flex;flex-direction:column;gap:var(--space-md);align-items:flex-start">
+            <div class="glass-avatar-group glass-avatar-group--sm">
+              <div class="glass-avatar glass-avatar--photo" style="--from:#e8a87c;--to:#d4845a">
+                <div class="glass-avatar__face">👩</div>
+              </div>
+              <div class="glass-avatar glass-avatar--photo" style="--from:#6baed6;--to:#3182bd">
+                <div class="glass-avatar__face">👨‍💻</div>
+              </div>
+              <div class="glass-avatar glass-avatar--overflow">
+                <div class="glass-avatar__face">+9</div>
+              </div>
+              <span class="glass-avatar-group__meta">sm · 32px</span>
+            </div>
+            <div class="glass-avatar-group">
+              <div class="glass-avatar glass-avatar--photo" style="--from:#e8a87c;--to:#d4845a">
+                <div class="glass-avatar__face">👩</div>
+              </div>
+              <div class="glass-avatar glass-avatar--photo" style="--from:#6baed6;--to:#3182bd">
+                <div class="glass-avatar__face">👨‍💻</div>
+              </div>
+              <div class="glass-avatar glass-avatar--overflow">
+                <div class="glass-avatar__face">+9</div>
+              </div>
+              <span class="glass-avatar-group__meta">default · 44px</span>
+            </div>
+            <div class="glass-avatar-group glass-avatar-group--lg">
+              <div class="glass-avatar glass-avatar--photo" style="--from:#e8a87c;--to:#d4845a">
+                <div class="glass-avatar__face">👩</div>
+              </div>
+              <div class="glass-avatar glass-avatar--photo" style="--from:#6baed6;--to:#3182bd">
+                <div class="glass-avatar__face">👨‍💻</div>
+              </div>
+              <div class="glass-avatar glass-avatar--overflow">
+                <div class="glass-avatar__face">+9</div>
+              </div>
+              <span class="glass-avatar-group__meta">lg · 56px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── BREADCRUMB ────────────────────────────────────────────────── -->
+    <section class="section" id="breadcrumb">
+      <div class="section__header">
+        <h2 class="section__title">Breadcrumb</h2>
+        <span class="section__subtitle">Collapsed · Icons · Sizes</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-lg);align-items:flex-start">
+        <nav class="glass glass-breadcrumb" aria-label="Breadcrumb">
+          <span class="glass-breadcrumb__crumb"><span class="glass-breadcrumb__crumb-icon">⌂</span>Home</span>
+          <span class="glass-breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="glass-breadcrumb__crumb">Design System</span>
+          <span class="glass-breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="glass-breadcrumb__crumb">Components</span>
+          <span class="glass-breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="glass-breadcrumb__crumb glass-breadcrumb__crumb--active" aria-current="page"><span class="glass-breadcrumb__crumb-icon">✦</span>Breadcrumb</span>
+        </nav>
+        <nav class="glass glass-breadcrumb" aria-label="Collapsed breadcrumb">
+          <span class="glass-breadcrumb__crumb"><span class="glass-breadcrumb__crumb-icon">⌂</span>Home</span>
+          <span class="glass-breadcrumb__sep" aria-hidden="true">›</span>
+          <div class="glass-breadcrumb__ellipsis-wrap" id="bc-ellipsis-wrap">
+            <span class="glass-breadcrumb__ellipsis" id="bc-ellipsis" role="button" aria-expanded="false" aria-label="Show hidden breadcrumbs">…</span>
+            <div class="glass glass-breadcrumb-dropdown" role="list">
+              <div class="glass-breadcrumb-dropdown__item" role="listitem" tabindex="0">🗂 Products</div>
+              <div class="glass-breadcrumb-dropdown__item" role="listitem" tabindex="0">📦 UI Kits</div>
+              <div class="glass-breadcrumb-dropdown__item" role="listitem" tabindex="0">💎 Glass Series</div>
+            </div>
+          </div>
+          <span class="glass-breadcrumb__sep" aria-hidden="true">›</span>
+          <span class="glass-breadcrumb__crumb glass-breadcrumb__crumb--active" aria-current="page">Liquid Glass Kit</span>
+        </nav>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ─── 12 ANIMATIONS ─────────────────────────────────────────────── -->
+    <section class="section" id="animations">
+      <div class="section__header">
+        <h2 class="section__title">12 Liquid Animations</h2>
+        <span class="section__subtitle">Pure CSS · Infinite loop · Respects reduced-motion</span>
+      </div>
+      <div class="anim-grid" aria-label="Animation demos">
+        <div class="glass anim-demo" aria-label="Liquid Morph animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">1 · Liquid Morph</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Shimmer animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">2 · Shimmer</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Float animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">3 · Float</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Refraction animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">4 · Refraction</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Ripple animation">
+          <div class="anim-demo__orb" style="position:relative"></div><span class="anim-demo__label">5 · Ripple</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Edge Glow animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">6 · Edge Glow</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Breathing Blur animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">7 · Breathing Blur</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Depth Shift animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">8 · Depth Shift</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Cascade Reveal animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">9 · Cascade Reveal</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Prism Hue Shift animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">10 · Prism Hue Shift</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Liquid Drain animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">11 · Liquid Drain</span>
+        </div>
+        <div class="glass anim-demo" aria-label="Surface Tension animation">
+          <div class="anim-demo__orb"></div><span class="anim-demo__label">12 · Surface Tension</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="footer__text">Liquid Glass UI Kit · WCAG AA · @supports fallback · prefers-reduced-motion · CSS Guidelines compliant</p>
+    </footer>
+
+  </div>
+</main>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

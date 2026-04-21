@@ -1,0 +1,118 @@
+@import url("https://use.typekit.net/txm5wvi.css");
+.sud { font-family: "sudz-regular",sans-serif; }
+.sudz { font-family: "sudz-black",sans-serif; }
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background:#232020;
+  
+}
+.gradient-wrap {
+  overflow: hidden;
+  width: 100%;
+  height:100vh;
+  position: relative;
+}
+.meshgradient {
+ /* width: 100%;
+  height:100%;
+  position: absolute;*/
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+ /* top:0;
+  bottom:0;
+  left:0;
+  right:0;*/
+  margin: auto;
+  mix-blend-mode: exclusion;
+
+}
+.meshgradient>h4,
+.meshgradient>h1,
+.meshgradient>h2,
+.meshgradient>h3,
+.gradient-wrap h4 {
+  /*mix-blend-mode: exclusion;*/
+
+  font-family:sans-serif;
+  font-family:"sudz-regular",sans-serif;
+  margin:20vh auto;
+}
+.meshgradient>.color {
+  width: 100%;
+  height:100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  transform: scale(1) rotate(0deg);
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;
+  background-repeat: no-repeat;
+
+}
+
+.c1 {
+  background: radial-gradient(#FF0080A1 25%, transparent 50%);
+  background-size: 60% 80%;
+  background-position: 0 0;
+  animation: c1 38s infinite linear;
+}
+.c2 {
+  background:radial-gradient(#00ffffA1 25%, transparent 50%);
+  background-size: 70% 80%;
+  background-position: 0 100%;
+  animation: c2 30s infinite linear;
+}
+
+.c3 {
+   background:radial-gradient(#a5a2a2A1 25%, transparent 50%);
+   background-size: 80% 80%;
+   background-position: 50% 0;
+   animation: c3 35s infinite linear;
+}
+.c4 {
+  background:radial-gradient(#747070A1 25%, transparent 50%);
+  background-size: 80% 80%;
+  background-position: 50% 100%;
+  animation: c4 36s infinite linear;
+
+}
+@keyframes c1 {
+  50%{ 
+  background-size: 80% 80%;
+  background-position: 50% 100%;
+  transform: scale(2.83) rotate(-75deg);
+  }
+}
+
+@keyframes c2 {
+  50%{ 
+    background-size: 80% 80%;
+   background-position: 50% 0;
+   transform: scale(3) rotate(90deg);
+  }
+}
+@keyframes c3 {
+  50%{ 
+  background-size: 70% 80%;
+  background-position: 0 100%;
+  transform: scale(3) rotate(8deg);
+  }
+}
+
+@keyframes c4 {
+  50%{ 
+   background-position: 0 0;
+    animation: c1 40s infinite;
+    transform: scale(2.63) rotate(-36deg);
+  }
+}

@@ -1,0 +1,10 @@
+html, body { 
+  min-height: 100%; 
+}
+body {
+  background: #92c7d6;
+  background-image: -webkit-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+  background-image: -moz-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+  background-image: -o-radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+  background-image: radial-gradient(top, circle cover, #97d0e1, #427388 80%);
+}

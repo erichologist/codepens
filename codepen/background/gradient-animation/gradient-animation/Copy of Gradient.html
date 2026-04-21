@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Stripe Gradient</title>
+    <script src="Gradient.js" ></script>
+</head>
+<style>
+body {
+	margin:0;
+	padding:0;
+	background:#222;
+
+}
+#gradient-canvas {
+	--gradient-color-1: #6ec3f4;
+	--gradient-color-2: #3a3aff;
+	--gradient-color-3: #ff61ab;
+	--gradient-color-4: #E63946;
+
+	--gradient-color-1: #9E9E9E; 
+	--gradient-color-2: #9E9E9E; 
+	--gradient-color-3: #746E6C;
+	--gradient-color-4: #746E6C;
+
+	--gradient-color-4:	#544E4C66;
+	--gradient-color-3: #464342;
+	--gradient-color-2: #343437;
+	--gradient-color-1:	#36333280;
+
+
+  --gradient-speed: 0.0000005511119999999999998;
+	mix-blend-mode:exclusion;
+	mix-blend-mode:difference;
+	mix-blend-mode:exclusion;
+	mix-blend-mode:difference;
+	width:100vw;
+	width:100%;
+height:200vh;
+  transform:scale(2);
+  /*animation:scale 5s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate;*/
+	
+transform: rotate(180deg) scale(1, 2);
+
+	
+  animation:scale 25s ease-in-out infinite/*, rotate 105s alternate infinite*/;
+	overflow: hidden;
+}
+
+/*
+@keyframes rotate {
+  0% {
+    transform:rotate(0deg);
+  }
+	25% {
+    transform:rotate(180deg);
+  }
+  50% {
+    transform:rotate(360deg);
+  }
+  75% {
+    transform:rotate(520deg);
+  }
+  100% {
+    transform:rotate(700deg);
+  }
+}*/
+@keyframes scale {
+  0% {
+    transform:rotate(180deg) scale(1, 1);
+  }
+	25% {
+    transform:rotate(180deg) scale(1, 1.5);
+  }
+  50% {
+    transform:rotate(180deg) scale(1, 2);
+  }
+	75% {
+    transform:rotate(180deg) scale(1, 1.5);
+  }
+  100% {
+    transform:rotate(180deg) scale(1, 1);
+  }
+}
+
+</style>
+<body>
+<canvas id="gradient-canvas"></canvas>
+
+
+
+
+<script>
+	var gradient = new Gradient()
+	gradient.initGradient('#gradient-canvas');
+</script>
+</body>
+</html>

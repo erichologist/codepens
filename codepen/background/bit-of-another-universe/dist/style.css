@@ -1,0 +1,49 @@
+.pulser {
+  width: 90vmin;
+  height: 90vmin;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  background: #d84578;
+  position: absolute;
+  transform-origin: 42vmin 48vmin;
+  -webkit-animation: filtered 10000ms 0ms infinite alternate linear;
+          animation: filtered 10000ms 0ms infinite alternate linear;
+  will-change: filter, transform;
+}
+
+main {
+  width: 90vmin;
+  height: 90vmin;
+  position: relative;
+}
+
+body {
+  background: #042739;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes filtered {
+  0% {
+    filter: hue-rotate(0deg) blur(3vmin);
+  }
+  100% {
+    filter: hue-rotate(360deg) blur(20vmin);
+  }
+}
+
+@keyframes filtered {
+  0% {
+    filter: hue-rotate(0deg) blur(3vmin);
+  }
+  100% {
+    filter: hue-rotate(360deg) blur(20vmin);
+  }
+}

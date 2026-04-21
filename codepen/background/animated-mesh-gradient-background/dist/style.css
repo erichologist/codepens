@@ -1,0 +1,18 @@
+body {
+  background-color: #000;
+}
+
+div.container {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+#gradient-canvas {
+  --gradient-color-1: #000000 !important;
+  --gradient-color-2: #39008F !important;
+  --gradient-color-3: #DF442E !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+}

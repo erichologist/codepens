@@ -1,0 +1,48 @@
+.background--custom1 {
+  background-color: #565656;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+canvas#canvas1 {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  transform: scale(1);
+  --gradient-color-1: #BAAFA2; 
+  --gradient-color-2: #464347; 
+  --gradient-color-3: #746E6C;  
+  --gradient-color-4: #847E7C;
+  --gradient-speed: 0.000019999999999999998;
+}
+.background--custom {
+  background-color: #777;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: -4;
+  top: 0;
+  left: 0;
+
+}
+
+canvas#canvas2 {
+  z-index: -3;
+  position: absolute;
+	opacity:1;
+	/*mix-blend-mode:plus-darker;*/
+  width: 100%;
+  height:100%;
+  transform: rotate(0) scale(1);
+  --gradient-color-1: #BAAFA2; 
+  --gradient-color-2: #55515066; 
+  --gradient-color-3: #746E6C;  
+  --gradient-color-4: #E6D6BC;
+  --gradient-speed: 0.000019999999999999998;
+}

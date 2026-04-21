@@ -1,0 +1,1 @@
+.box {  display: inline-block;  width: 3em;  height: 3em;  background-color: darkorange;}.box--inverted-css {  filter: invert(100%);  -webkit-filter: invert(100%);}

@@ -1,0 +1,73 @@
+@import url("https://use.typekit.net/ygj7fsw.css");
+
+.wipe { font-family: "puffin-arcade-wipe",sans-serif; }
+.regular { font-family: "puffin-arcade-regular",sans-serif; }
+.tate { font-family: "puffin-arcade-tate",sans-serif; }
+.level { font-family: "puffin-arcade-level",sans-serif; }
+.liquid { font-family: "puffin-arcade-liquid",sans-serif; }
+.yoko { font-family: "puffin-arcade-yoko",sans-serif; }
+.dither { font-family: "puffin-arcade-dither",sans-serif; }
+.loadout { font-family: "puffin-arcade-loadout",sans-serif; }
+.nerf { font-family: "puffin-arcade-nerf",sans-serif; }
+.warp { font-family: "puffin-arcade-warp",sans-serif; }
+.foozle { font-family: "puffin-arcade-foozle",sans-serif; }
+.chrome { font-family: "puffin-arcade-chrome",sans-serif; }
+
+
+
+html,body {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100vh;
+
+}
+.body {
+  background-image: url('#gradient-canvas');
+  background-size: 200% 200%;     /* fills container */
+  background-position:top;
+  background-repeat:repeat;
+  width: 100%;
+  height: 100%;
+}
+#gradient-canvas {
+  position:static;
+  position:relative;
+  position:absolute;
+
+
+
+  --gradient-color-1: #D9DFD1; 
+  --gradient-color-2: #343433; 
+  --gradient-color-3: #746E6C;  
+  --gradient-color-4: #03e9f4;
+  z-index:0;
+  margin:0;padding:0;
+       /* fills container */
+  background-position:top;
+  background-repeat:repeat;
+top:-10%;
+  height:111%;
+  width:101%;
+  overflow:hidden;
+}
+h1{font-size:2.9rem;line-height:1.1134;}
+h2{font-size:2.55rem;line-height:1.1134;}
+h3{font-size:2.25rem;line-height:1.11345;}
+h4{font-size:2.05rem;line-height:1.1135;}
+h5{font-size:1.76rem;line-height:1.1135;}
+h2,h3,h4,h5,h6,h1{
+
+    font-family:
+      "puffin-arcade-nerf",
+      "puffin-arcade-chrome",
+      sans-serif;
+  color: #aaa;
+  padding:.1rem auto;
+  z-index:100;
+  text-align:center;
+  width:100%;
+  display:block;
+  mix-blend-mode: exclusion;
+
+}

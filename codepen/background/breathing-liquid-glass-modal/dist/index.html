@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Breathing liquid glass modal</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <body class="flex justify-center items-center min-h-screen bg-cover bg-center" style="background-image: url('https://picsum.photos/1080/1920');">
+  <svg class="absolute inset-0 w-full h-full opacity-20 mix-blend-overlay animate-distort">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+  </svg>
+
+  <div class="glass-container text-center p-6 rounded-xl shadow-lg border border-white/30 backdrop-blur-lg bg-white/10 animate-morph">
+    <h1 class="text-white text-2xl font-semibold">Liquid Glass UI</h1>
+    <p class="text-white text-sm">A translucent, dynamic interface inspired by Apple's latest design language.</p>
+    <button class="glass-button mt-4 px-4 py-2 rounded-lg border border-white/20 bg-white/20 backdrop-blur-md transition-transform hover:scale-110 hover:bg-white/30">
+      Click Me
+    </button>
+  </div>
+</body>
+    <script src='https://cdn.tailwindcss.com'></script><script  src="./script.js"></script>
+
+  </body>
+  
+</html>

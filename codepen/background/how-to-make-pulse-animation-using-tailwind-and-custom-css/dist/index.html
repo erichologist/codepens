@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>How to make pulse animation using Tailwind and custom CSS</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css'><link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="bg-black">
+<div class="flex justify-center items-center h-screen">
+        <div class="h-20 w-20 bg-red-600 rounded-full flex justify-center items-center animation-pulse">
+            <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+            </svg>
+        </div>
+    </div>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.3/vue-resource.min.js'></script><script type="module" src="./script.js"></script>
+
+  </body>
+  
+</html>

@@ -1,0 +1,21 @@
+body {
+  height: 100vh;
+  width:100vw;
+  margin:0;
+background-repeat: no-repeat;
+background-color:hsla(240,55%,5%,1);
+background-image:
+radial-gradient(at 39% 37%, hsla(228,72%,7%,1) 0px, transparent 50%),
+radial-gradient(at 16% 87%, hsla(228,72%,7%,1) 0px, transparent 50%),
+radial-gradient(at 73% 24%, hsla(228,72%,7%,1) 0px, transparent 50%),
+radial-gradient(at -40% -20%, hsla(273,100%,65%,1) 0px, transparent 40%),
+radial-gradient(at 60% 72%, hsla(227,87%,55%,1) 0px, transparent 50%),
+radial-gradient(at 93% 90%, hsla(151,100%,49%,1) 0px, transparent 50%);
+  animation: bgone 6s infinite;
+}
+
+@keyframes bgone {
+  0% {background-size:100%;background-position:bottom 0 right 0;}
+  50% {background-size:150%;background-position:bottom 50% right 40%;}
+  100% {background-size:100%;background-position:bottom 00 right 0}
+}
