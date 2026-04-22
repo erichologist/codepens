@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>[gsap/lenis] ❍ Layout Explorations with Gsap, Lenis and ScrollTrigger N°1</title>
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'><link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="wrapper">
+  <header>
+    <div class="header-container">
+      <div class="logo">ARTISTRY</div>
+      <div class="get-in-touch">
+        <a href="#contact">+GET IN TOUCH</a>
+        <div class="yellow-line-container">
+          <div class="scroll-indicator"></div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#portfolio">portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="row row-svg">
+        <div class="col-12">
+          <div class="svg-container">
+            <svg width="100%" height="auto" viewBox="0 0 113 19" xmlns="http://www.w3.org/2000/svg">
+              <g fill="var(--offblack)">
+                <path d="m98.9088 18v-17.159973h13.0082v3.528003h-8.688v3.048h7.488v3.52797h-7.488v3.528h8.832v3.528z" />
+                <path d="m87.9181 18-5.712-17.159973h4.728l3.24 12.023973h.048l3.264-12.023973h4.56l-5.568 17.159973z" />
+                <path d="m77.0988 18v-17.159973h4.32v17.159973z" />
+                <path d="m66.7308 18v-13.63197h-4.992v-3.528003h14.28v3.528003h-4.968v13.63197z" />
+                <path d="m46.8616 18 6.528-17.159973h4.344l6.576 17.159973h-4.728l-1.104-3.576h-5.88l-1.104 3.576zm6.72-6.864h3.936l-1.944-6.33597h-.048z" />
+                <path d="m33.7431 18v-17.159973h13.008v3.528003h-8.688v3.048h7.488v3.52797h-7.488v3.528h8.832v3.528z" />
+                <path d="m17.9397 18v-17.159973h8.088c3.816 0 6.12 1.776003 6.12 4.896003 0 2.4-1.344 3.816-3.48 4.29597v.048c4.296.744 2.736 7.392 3.72 7.68v.24h-4.488c-.84-.72.72-5.976-2.952-5.976h-2.688v5.976zm4.32-9.50397h2.928c1.728 0 2.64-.624 2.64-2.064s-.912-2.064-2.64-2.064h-2.928z" />
+                <path d="m8.99145 18.384c-5.448 0-8.208003-3.792-8.208003-8.90401 0-5.256 2.904003-9.023996 8.328003-9.023996 4.67995 0 7.17595 2.783996 7.58395 6.767996h-4.416c-.312-1.872-1.08-3.24-3.35995-3.24-2.856 0-3.72 2.208-3.72 5.424 0 3.24001.864 5.44801 3.72 5.44801 2.30395 0 3.07195-1.368 3.35995-3.288h4.416c-.384 3.936-2.976 6.816-7.70395 6.816z" />
+              </g>
+            </svg>
+            <div class="svg-texture-overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-content">
+        <div class="col-5 hero-left">
+          <div class="hero-image">
+            <img src="https://cdn.cosmos.so/2200c8e1-2901-4fdb-806c-a2596b3e9c49?format=jpeg" alt="Portrait">
+            <div class="texture-overlay"></div>
+          </div>
+        </div>
+        <div class="col-3"></div> <!-- Gap between image and text -->
+        <div class="col-4 hero-right">
+          <p class="about-text">I am a visual artist exploring the intersection of mental landscapes and creative expression. Creating art as a therapeutic journey, my work embodies the transformation of internal chaos into external beauty. Through deliberate practice and intuitive creation, I find that art provides structure in times of uncertainty and offers a rare clarity when thoughts become overwhelming. Each piece becomes both mirror and window—reflecting inner states while allowing glimpses into possible futures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="gallery-wrapper">
+            <div class="gallery-item">
+              <img src="https://cdn.cosmos.so/3be2e4e2-4ba8-47c2-9bd7-6b09cc6b82e3?format=jpeg" alt="Gallery image 1">
+            </div>
+            <div class="gallery-item">
+              <img src="https://cdn.cosmos.so/91da03b4-8f72-40bd-9531-ce101ecb9508?format=jpeg" alt="Gallery image 2">
+            </div>
+            <div class="gallery-item">
+              <img src="https://cdn.cosmos.so/9dbf17e4-d4fa-4095-98dd-d6527d4bb53a?format=jpeg" alt="Gallery image 3">
+            </div>
+            <div class="gallery-item">
+              <img src="https://cdn.cosmos.so/bed49b37-4a4a-4cec-ac80-86f5d2edbb8d?format=jpeg" alt="Gallery image 4">
+            </div>
+            <div class="gallery-item">
+              <img src="https://cdn.cosmos.so/031178f7-7078-4866-9de3-c80062188a2b?format=jpeg" alt="Gallery image 5">
+            </div>
+          </div>
+          <div class="gallery-caption">
+            <p>When the mind becomes a labyrinth of anxious thoughts, art offers a thread to follow. The act of creation becomes rebellion against internal chaos—each finished piece a victory over the voices that whisper you cannot. Through repetitive artistic practice—the mixing of colors, the careful composition, the patient observation—we create rhythm where there was discord. This rhythm becomes a meditation, and within this meditation, we uncover parts of ourselves previously obscured by noise. Art does not remove our struggles but transforms them into something we can hold, examine, and eventually release.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <section id="footer" class="footer">
+    <div class="footer-cta">
+      <a href="mailto:hi@filip.fyi" class="footer-button">GET IN TOUCH</a>
+      <a href="mailto:hi@filip.fyi" class="footer-email">hi@filip.fyi</a>
+    </div>
+
+    <div class="footer-svg-container">
+      <svg width="100%" height="auto" viewBox="0 0 78 19" xmlns="http://www.w3.org/2000/svg">
+        <g class="footer-svg-paths" fill="var(--offblack)">
+          <path d="m62.7985 18v-17.159973h4.32l6 10.199973h.048v-10.199973h4.32v17.159973h-4.32l-6-10.19997h-.048v10.19997z" />
+          <path d="m52.8726 18.384c-5.448 0-8.496-3.792-8.496-8.97601 0-5.16 3.048-8.951996 8.496-8.951996 5.4 0 8.496 3.791996 8.496 8.951996 0 5.18401-3.096 8.97601-8.496 8.97601zm-4.08-8.97601c0 3.00001.936 5.44801 4.08 5.44801 3.12 0 4.08-2.448 4.08-5.44801 0-2.976-.96-5.424-4.08-5.424-3.144 0-4.08 2.448-4.08 5.424z" />
+          <path d="m38.6212 18v-17.159973h4.32v17.159973z" />
+          <path d="m30.4798 18.384c-4.488 0-7.872-2.28-7.872-6.216h4.368c0 1.992 1.512 2.736 3.456 2.736 1.608 0 2.424-.648 2.424-1.536 0-1.464-1.704-1.848-4.08-2.568-2.976-.91201-5.64-2.06401-5.64-5.13601 0-3.744 2.928-5.207996 6.624-5.207996 4.008 0 7.152 2.111996 7.272 5.591996h-4.368c-.192-1.32-1.248-2.112-2.904-2.112-1.296 0-2.208.432-2.208 1.416 0 1.152.96 1.536 3.144 2.184 3.24.96 6.576 1.872 6.576 5.42401 0 3.288-2.496 5.424-6.792 5.424z" />
+          <path d="m17.0925 18v-17.159973h4.32v17.159973z" />
+          <path d="m6.10183 18-5.711998-17.159973h4.728008l3.23999 12.023973h.048l3.26397-12.023973h4.56l-5.568 17.159973z" />
+        </g>
+      </svg>
+      <div class="svg-footer-overlay"></div>
+    </div>
+  </section>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/CustomEase.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js'></script><script  src="./script.js"></script>
+
+  </body>
+  
+</html>
